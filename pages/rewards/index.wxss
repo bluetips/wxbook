@@ -1,0 +1,72 @@
+.page {
+    background: #ffffff;
+}
+
+.page .content .scroll-view_V .list {
+    padding: 0 30rpx;
+}
+
+.page .content .scroll-view_V .list .item {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 30rpx 0;
+}
+
+.page .content .scroll-view_V .list .item:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    height: 1px;
+    background: #D8D8D8;
+    transform-origin: 0 100%;
+    transform: scaleY(0.5);
+}
+
+.page .content .scroll-view_V .list .item .avatar {
+    width: 90rpx;
+    height: 90rpx;
+    border-radius: 45rpx;
+    background-size: 100% 100%;
+}
+
+.page .content .scroll-view_V .list .item .info {
+    -webkit-box-flex: 1;
+    flex: 1;
+    padding: 0 30rpx;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.page .content .scroll-view_V .list .item .info .nickname {
+    font-size: 32rpx;
+    color: #333333;
+    height: 40rpx;
+    line-height: 40rpx;
+    margin-top: 5rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.page .content .scroll-view_V .list .item .info .date {
+    font-size: 24rpx;
+    color: #999999;
+    margin-top: 10rpx;
+}
+
+.page .content .scroll-view_V .list .item .gift {
+    width: 90rpx;
+    height: 90rpx;
+    background-size: 100% 100%;
+}
+
+.page .content .scroll-view_V .list .item .num {
+    font-size: 24rpx;
+    color: #999999;
+}

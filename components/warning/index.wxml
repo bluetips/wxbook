@@ -1,0 +1,27 @@
+<view class="warning {{mode}}">
+    <view class="baseline">
+        <baseline mode="{{mode}}" text="支持作者"></baseline>
+    </view>
+    <view catchtap="ignoreShowMenu" class="content">
+        <block wx:if="{{!!warning.buy_mode}}">
+            <view class="price">解锁本书 {{warning.price}}书币</view>
+            <view class="welth">
+                <view class="col">余额：{{welth}}书币</view>
+                <view class="col">{{coupon}}书券</view>
+            </view>
+            <button catchtap="buy" class="button-primary">解锁此书</button>
+            <view catchtap="confirm" class="setting">
+                <view class="iconfont icon-radio {{confirm?'checked':''}}"></view>开启自动解锁，不再提示</view>
+        </block>
+        <block wx:else>
+            <view class="price">解锁本章 {{warning.price}}书币</view>
+            <view class="welth">
+                <view class="col">余额：{{welth}}书币</view>
+                <view class="col">{{coupon}}书券</view>
+            </view>
+            <button catchtap="buy" class="button-primary">解锁此章节</button>
+            <view catchtap="confirm" class="setting">
+                <view class="iconfont icon-radio {{confirm?'checked':''}}"></view>开启自动解锁，不再提示</view>
+        </block>
+    </view>
+</view>

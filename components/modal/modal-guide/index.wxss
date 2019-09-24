@@ -1,0 +1,51 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 99;
+}
+
+.dialog {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    color: #FFFFFF;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    z-index: 100;
+    font-weight: normal;
+    font-size: 36rpx;
+}
+
+.dialog .button-close {
+    display: block;
+    height: 70rpx;
+    line-height: 70rpx;
+    text-align: center;
+    border: 0 none;
+    background: none;
+    font-size: 28rpx;
+    color: #666666;
+    color: #FFFFFF;
+    border: 2rpx solid #FFFFFF;
+    border-radius: 35rpx;
+    width: 200rpx;
+    margin-top: 90rpx;
+}
+
+.dialog .button-close:after {
+    border: 0 none;
+}

@@ -1,0 +1,12 @@
+.page {
+    background: #ffffff;
+}
+
+.page .content .scroll-view_V .list {
+    padding: 0 30rpx 30rpx;
+}
+
+.page .content .scroll-view_V .list .item {
+    position: relative;
+    padding: 30rpx 0 0;
+}

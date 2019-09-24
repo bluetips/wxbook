@@ -1,0 +1,20 @@
+.page {
+    background: #FFFFFF;
+}
+
+.page .content .scroll-view_V {
+    height: 100%;
+}
+
+.page .content .scroll-view_V .list {
+    padding: 0 30rpx 30rpx;
+}
+
+.page .content .scroll-view_V .list .item {
+    padding: 30rpx 0 0;
+}
+
+.page .content .scroll-view_V .empty {
+    font-size: 28rpx;
+    color: #999999;
+}

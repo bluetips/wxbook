@@ -1,0 +1,56 @@
+<view class="page">
+    <view class="navigation">
+        <scroll-view scrollX class="scroll-view_H">
+            <view class="list">
+                <view bindtap="change" class="item {{currentIndex===index?'active':''}}" data-index="{{index}}" wx:for="{{ranks_title}}" wx:key="index">{{item}}</view>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="content">
+        <scroll-view scrollY bindscrolltolower="getMore" class="scroll-view_V {{currentIndex===0?'active':''}}">
+            <block wx:if="{{ready}}">
+                <view class="list" wx:if="{{fangtang_monthly_list.length>0}}">
+                    <view class="item" wx:for="{{fangtang_monthly_list}}" wx:key="key">
+                        <rank-novel-card index="{{index+1}}" novel="{{item}}"></rank-novel-card>
+                    </view>
+                    <view class="finish">
+                        <baseline text="已全部加载" wx:if="{{fangtang_monthly_finish}}"></baseline>
+                    </view>
+                </view>
+                <nothing wx:else>
+                    <view class="empty">空空如也</view>
+                </nothing>
+            </block>
+        </scroll-view>
+        <scroll-view scrollY bindscrolltolower="getMore" class="scroll-view_V {{currentIndex===1?'active':''}}">
+            <block wx:if="{{ready}}">
+                <view class="list" wx:if="{{fangtang_newly_list.length>0}}">
+                    <view class="item" wx:for="{{fangtang_newly_list}}" wx:key="key">
+                        <rank-novel-card index="{{index+1}}" novel="{{item}}"></rank-novel-card>
+                    </view>
+                    <view class="finish">
+                        <baseline text="已全部加载" wx:if="{{fangtang_newly_finish}}"></baseline>
+                    </view>
+                </view>
+                <nothing wx:else>
+                    <view class="empty">空空如也</view>
+                </nothing>
+            </block>
+        </scroll-view>
+        <scroll-view scrollY bindscrolltolower="getMore" class="scroll-view_V {{currentIndex===2?'active':''}}">
+            <block wx:if="{{ready}}">
+                <view class="list" wx:if="{{fangtang_original_list.length>0}}">
+                    <view class="item" wx:for="{{fangtang_original_list}}" wx:key="key">
+                        <rank-novel-card index="{{index+1}}" novel="{{item}}"></rank-novel-card>
+                    </view>
+                    <view class="finish">
+                        <baseline text="已全部加载" wx:if="{{fangtang_original_finish}}"></baseline>
+                    </view>
+                </view>
+                <nothing wx:else>
+                    <view class="empty">空空如也</view>
+                </nothing>
+            </block>
+        </scroll-view>
+    </view>
+</view>

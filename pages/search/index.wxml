@@ -1,0 +1,25 @@
+<view class="page">
+    <view class="searchbar">
+        <searchbar bind:clear="onClear" bind:input="onInput" bind:search="onSearch" page="search" query="{{query}}"></searchbar>
+    </view>
+    <view class="content">
+        <view class="section" wx:if="{{!query&&hotList.length}}">
+            <popular-search words="{{hotList}}"></popular-search>
+        </view>
+        <block wx:if="{{ready&&query}}">
+            <scroll-view scrollY bindscrolltolower="fetch" class="scroll-view_V" wx:if="{{result.length}}">
+                <view class="list">
+                    <view class="item" wx:for="{{result}}" wx:key="id">
+                        <novel-card novel="{{item}}"></novel-card>
+                    </view>
+                    <view class="finish" wx:if="{{finish}}">
+                        <baseline text="已全部加载"></baseline>
+                    </view>
+                </view>
+            </scroll-view>
+            <nothing wx:else>
+                <view class="empty">未找到你搜索的相关结果。</view>
+            </nothing>
+        </block>
+    </view>
+</view>

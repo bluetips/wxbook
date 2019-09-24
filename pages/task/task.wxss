@@ -1,0 +1,132 @@
+.page {
+    background-color: #ffffff;
+    overflow-y: auto;
+}
+
+.page .subhead {
+    position: relative;
+    padding: 30rpx;
+    background: #ffffff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    line-height: 1;
+}
+
+.page .subhead:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6rpx;
+    height: 30rpx;
+    background: #21D3AB;
+}
+
+.page .subhead .title {
+    -webkit-box-flex: 1;
+    flex: 1;
+    color: #333333;
+    font-size: 32rpx;
+    font-weight: bold;
+}
+
+.page .subhead .title .primary {
+    color: #21D3AB;
+    margin-left: 20rpx;
+}
+
+.page .bd {
+    font-size: 28rpx;
+    padding: 0 30rpx;
+    line-height: 1.5;
+    color: #333333;
+}
+
+.page .bd .link {
+    color: #21D3AB;
+    display: inline-block;
+}
+
+.page .bd .primary {
+    font-size: 36rpx;
+    font-weight: bold;
+    margin: 0 8rpx;
+}
+
+.page .mod+.mod {
+    margin-top: 30rpx;
+}
+
+.page .timeline {
+    position: relative;
+}
+
+.page .timeline .item {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 30rpx 30rpx;
+}
+
+.page .timeline .item:not(:first-child):before,.page .timeline .item:not(:last-child):after {
+    content: '';
+    width: 1px;
+    height: 30rpx;
+    position: absolute;
+    left: 60rpx;
+    background: #F2F7FF;
+}
+
+.page .timeline .item:not(:first-child):before {
+    top: 0;
+}
+
+.page .timeline .item:not(:last-child):after {
+    top: 90rpx;
+}
+
+.page .timeline .item .icon {
+    width: 60rpx;
+    height: 60rpx;
+    margin-right: 30rpx;
+}
+
+.page .timeline .item .content {
+    -webkit-box-flex: 1;
+    flex: 1;
+    font-size: 32rpx;
+    font-weight: bold;
+    color: #333333;
+}
+
+.page .timeline .item .content .primary {
+    color: #21D3AB;
+}
+
+.page .timeline .item .button-primary {
+    font-size: 28rpx;
+    width: 240rpx;
+    height: 60rpx;
+    color: #ffffff;
+    background: #21D3AB;
+    line-height: 60rpx;
+}
+
+.page .explain {
+    padding: 30rpx;
+}
+
+.page .explain .li {
+    font-size: 28rpx;
+    color: #999999;
+    padding: 0 15rpx;
+}

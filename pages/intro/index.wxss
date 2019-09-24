@@ -1,0 +1,339 @@
+.page {
+    overflow: hidden;
+}
+
+.page .content {
+    position: relative;
+}
+
+.page .content .inner .novel {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    background: #ffffff;
+    padding: 40rpx 30rpx;
+}
+
+.page .content .inner .novel .intro {
+    -webkit-box-flex: 1;
+    flex: 1;
+    line-height: 1.6;
+}
+
+.page .content .inner .novel .intro .title {
+    font-size: 36rpx;
+    color: #333333;
+    font-weight: bold;
+}
+
+.page .content .inner .novel .intro .roles {
+    color: #8A8A8F;
+    font-size: 24rpx;
+    margin-top: 10rpx;
+}
+
+.page .content .inner .novel .intro .score {
+    color: #ff8c00;
+}
+
+.page .content .inner .novel .intro .extra {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    color: #8A8A8F;
+    font-size: 24rpx;
+    margin-top: 10rpx;
+}
+
+.page .content .inner .novel .intro .extra .info+.info {
+    margin-left: 20rpx;
+}
+
+.page .content .inner .novel .media {
+    width: 180rpx;
+    margin-left: 30rpx;
+}
+
+.page .content .inner .operator {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    background: #ffffff;
+    position: relative;
+    z-index: 2;
+}
+
+.page .content .inner .operator:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    height: 1px;
+    background: #D8D8D8;
+    transform-origin: 0 100%;
+    transform: scaleY(0.5);
+    top: 0;
+    bottom: auto;
+}
+
+.page .content .inner .operator .action {
+    position: relative;
+    -webkit-box-flex: 1;
+    flex: 1;
+}
+
+.page .content .inner .operator .action .button-plain {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    height: 100rpx;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    color: #999999;
+    background: transparent;
+    text-align: center;
+    line-height: 1;
+}
+
+.page .content .inner .operator .action .button-plain.button-donate {
+    color: #F5A623;
+}
+
+.page .content .inner .operator .action .button-plain.button-share {
+    color: #F86000;
+}
+
+.page .content .inner .operator .action .button-plain:after {
+    border: 0 none;
+}
+
+.page .content .inner .operator .action .button-plain .iconfont {
+    font-size: 36rpx;
+}
+
+.page .content .inner .operator .action .button-plain .text {
+    margin-left: 15rpx;
+    font-size: 28rpx;
+}
+
+.page .content .inner .operator .action .fade {
+    width: 100%;
+    animation-duration: 0.5s;
+    animation-name: fade;
+}
+
+.page .content .inner .operator .action .tip {
+    position: absolute;
+    bottom: -50rpx;
+    left: 50%;
+    transform: translate(-50%,0);
+    white-space: nowrap;
+    background: #F86000;
+    color: #ffffff;
+    font-size: 28rpx;
+    border-radius: 5rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    padding: 0 16rpx;
+    animation-duration: 1s;
+    animation-name: bounce;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+
+.page .content .inner .operator .action .tip:after {
+    content: '';
+    position: absolute;
+    top: -10rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-width: 0 16rpx 16rpx;
+    border-style: solid;
+    border-color: transparent transparent #F86000;
+}
+
+.page .content .inner .operator .action:not(:last-child):after {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    content: '';
+    width: 1px;
+    background: #D8D8D8;
+    transform-origin: 0 100%;
+    transform: scaleX(0.5);
+}
+
+.page .content .inner .summary {
+    position: relative;
+    background: #ffffff;
+    padding: 40rpx 30rpx;
+}
+
+.page .content .inner .summary:after {
+    position: absolute;
+    bottom: 0;
+    left: 30rpx;
+    right: 30rpx;
+    content: '';
+    height: 1px;
+    background: #D8D8D8;
+    transform-origin: 0 100%;
+    transform: scaleY(0.5);
+}
+
+.page .content .inner .rewards .after {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+}
+
+.page .content .inner .rewards .after .avatar {
+    width: 50rpx;
+    height: 50rpx;
+    background-size: 100% 100%;
+    border-radius: 25rpx;
+    margin-left: 10rpx;
+}
+
+.page .content .inner .related {
+    width: 100%;
+    margin-top: -15rpx;
+}
+
+.page .content .inner .related .list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 15rpx 30rpx;
+}
+
+.page .content .inner .related .list .item {
+    width: 33.3%;
+    padding: 15rpx;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.page .bottom {
+    position: relative;
+}
+
+.page .bottom .shadow {
+    position: absolute;
+    bottom: 100rpx;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+}
+
+.page .bottom .action-group {
+    height: 100rpx;
+    background: #ffffff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    box-shadow: 0 0 20rpx 0 rgba(0,0,0,0.05);
+}
+
+.page .bottom .action-group .action {
+    -webkit-box-flex: 1;
+    flex: 1;
+}
+
+.page .bottom .action-group .action .button-shelf {
+    display: block;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    border: 0 none;
+    background: none;
+    font-size: 28rpx;
+    color: #666666;
+    font-size: 32rpx;
+}
+
+.page .bottom .action-group .action .button-shelf:after {
+    border: 0 none;
+}
+
+.page .bottom .action-group .action .button-read {
+    display: block;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    border: 0 none;
+    background: none;
+    font-size: 32rpx;
+    color: #ffffff;
+    background: #21D3AB;
+    border-radius: 0;
+}
+
+.page .bottom .action-group .action .button-read:after {
+    border: 0 none;
+}
+
+@-webkit-keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        transform: translate(-50%,0);
+    }
+
+    100%,20%,50%,80% {
+        transform: translate(-50%,0);
+    }
+
+    40% {
+        transform: translate(-50%,-10rpx);
+    }
+
+    60% {
+        transform: translate(-50%,-2rpx);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translate(-50%,0);
+    }
+
+    100%,20%,50%,80% {
+        transform: translate(-50%,0);
+    }
+
+    40% {
+        transform: translate(-50%,-10rpx);
+    }
+
+    60% {
+        transform: translate(-50%,-2rpx);
+    }
+}

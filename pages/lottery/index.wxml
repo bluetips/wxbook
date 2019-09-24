@@ -1,0 +1,25 @@
+<view class="page">
+    <view class="content">
+        <image class="title" src="/images/lottery/lottery-title.png"></image>
+        <image class="combo" src="/images/lottery/combo.png"></image>
+        <image class="shake" src="/images/lottery/mobile.png"></image>
+        <view class="notice">摇动手机或者点击下方按钮开始抽奖</view>
+        <view class="chances" wx:if="{{ready}}">
+            <button bindtap="lottery" class="button-start" wx:if="{{got-used>0}}">还有 {{got-used}} 次机会</button>
+            <button class="button-start" wx:else>抽奖机会用光了哟，去看书吧</button>
+        </view>
+        <view style="display:{{visible?'block':'none'}}">
+            <view class="mask {{visible?'show':''}}"></view>
+            <view class="modal {{visible?'show':''}}">
+                <view class="dialog">
+                    <view class="hd">温馨提示</view>
+                    <view class="bd">
+                        <image class="logo" src="{{product.logo}}"></image>
+                        <view class="message">{{product.name}}</view>
+                        <button bindtap="handleModal" class="button-shake">{{got-used>0?'再摇一次':'抽奖机会用光了哟'}}</button>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

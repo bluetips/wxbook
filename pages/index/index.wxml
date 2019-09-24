@@ -1,0 +1,28 @@
+<view class="page">
+    <searchbar page="index"></searchbar>
+    <view class="tabbar">
+        <tabbar bind:switch="switchTab" idx="{{gender==='male'?0:1}}" tabs="{{tabs}}"></tabbar>
+    </view>
+    <view class="content">
+        <view class="inner" wx:if="{{ready}}">
+            <scroll-view scrollY bindscrolltolower="fetch" class="scroll-view_V {{gender==='female'?'active':''}}">
+                <view class="list">
+                    <view class="item" wx:for="{{female.list}}" wx:key="index">
+                        <recommend-item bind:intro="goToIntro" bind:read="readArticle" novel="{{item}}"></recommend-item>
+                    </view>
+                </view>
+            </scroll-view>
+            <scroll-view scrollY bindscrolltolower="fetch" class="scroll-view_V {{gender==='male'?'active':''}}">
+                <view class="list">
+                    <view class="item" wx:for="{{male.list}}" wx:key="index">
+                        <recommend-item bind:intro="goToIntro" bind:read="readArticle" novel="{{item}}"></recommend-item>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+        <no-network bind:refresh="onShow" wx:if="{{offline}}"></no-network>
+    </view>
+    <button class="button-fixed-share animated tada" openType="share">
+        <image class="share" src="/images/share.png"></image>
+    </button>
+</view>

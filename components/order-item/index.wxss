@@ -1,0 +1,54 @@
+.order {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.order .content {
+    -webkit-box-flex: 1;
+    flex: 1;
+    margin-right: 30rpx;
+}
+
+.order .content .title {
+    font-size: 36rpx;
+    color: #333333;
+}
+
+.order .content .time {
+    font-size: 24rpx;
+    color: #999999;
+}
+
+.order .after {
+    width: 200rpx;
+    text-align: right;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+}
+
+.order .after .price {
+    font-size: 40rpx;
+    font-weight: bold;
+    color: #999999;
+}
+
+.order .after .status {
+    font-size: 24rpx;
+}
+
+.order .after .status.paid {
+    color: #1aad16;
+}
+
+.order .after .status.refunded {
+    color: #ff6666;
+}
+
+.order .after .status.refunding {
+    color: #e87664;
+}

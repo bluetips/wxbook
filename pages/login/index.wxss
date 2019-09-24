@@ -1,0 +1,39 @@
+.page .content .user {
+    margin-top: 160rpx;
+}
+
+.page .content .user .avatar {
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 100rpx;
+    overflow: hidden;
+    margin: 0 auto;
+    background-image: url('https://qcdn.pinchuzu.cn/spa/koala@2x.png');
+    background-size: 100% 100%;
+}
+
+.page .content .notice {
+    font-size: 28rpx;
+    color: #999999;
+    text-align: center;
+    margin-top: 30rpx;
+}
+
+.page .content .button-login {
+    display: block;
+    height: 75rpx;
+    line-height: 75rpx;
+    text-align: center;
+    border: 0 none;
+    background: none;
+    font-size: 32rpx;
+    color: #ffffff;
+    background: #21D3AB;
+    border-radius: 37.5rpx;
+    width: 400rpx;
+    margin-top: 30rpx;
+}
+
+.page .content .button-login:after {
+    border: 0 none;
+}

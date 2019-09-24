@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "邀请记录",
+    "usingComponents": {
+        "baseline": "/components/baseline/index",
+        "nothing": "/components/nothing/index"
+    }
+}

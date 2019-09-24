@@ -1,0 +1,87 @@
+.page {
+    background: #ffffff;
+}
+
+.page .filter-groups {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 30rpx 20rpx;
+    background: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+.page .filter-groups:after {
+    position: absolute;
+    bottom: 0;
+    left: 30rpx;
+    right: 30rpx;
+    content: '';
+    height: 1px;
+    background: #D8D8D8;
+    transform-origin: 0 100%;
+    transform: scaleY(0.5);
+}
+
+.page .filter-groups .group {
+    margin-right: -30rpx;
+    overflow: hidden;
+}
+
+.page .filter-groups .group .item {
+    float: left;
+    min-width: 96rpx;
+    padding: 0 20rpx;
+    border-radius: 25rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    font-size: 28rpx;
+    color: #999999;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 20rpx;
+    margin-right: 30rpx;
+}
+
+.page .filter-groups .group .item.active {
+    color: #ffffff;
+    background-color: #21D3AB;
+}
+
+.page .filter-groups .group .arrow {
+    position: absolute;
+    top: 50%;
+    right: 30rpx;
+    transform: translateY(-50%) rotate(-90deg);
+}
+
+.page .filter-groups .group .icon-arrow {
+    color: #999999;
+}
+
+.page .filter-groups.fixed {
+    position: fixed;
+    left: 0;
+}
+
+.page .filter-groups.fixed:after {
+    left: 0;
+    right: 0;
+}
+
+.page .content .scroll-view_V {
+    height: 100%;
+}
+
+.page .content .scroll-view_V .list {
+    padding: 0 30rpx;
+}
+
+.page .content .scroll-view_V .list .item {
+    padding-top: 30rpx;
+}
+
+.page .content .scroll-view_V .empty {
+    font-size: 28rpx;
+    color: #999999;
+}

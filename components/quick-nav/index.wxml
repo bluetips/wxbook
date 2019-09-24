@@ -1,0 +1,26 @@
+<view class="nav">
+    <view class="col">
+        <navigator class="link" hoverClass="none" url="/pages/ranks/index">
+            <view class="ico ico-ranking"></view>
+            <text>排行榜</text>
+        </navigator>
+    </view>
+    <view class="col">
+        <navigator class="link" hoverClass="none" url="/pages/store/index">
+            <view class="ico ico-classify"></view>
+            <text>分类</text>
+        </navigator>
+    </view>
+    <view class="col">
+        <navigator class="link" hoverClass="none" url="/pages/lottery/index">
+            <view class="ico ico-lottery"></view>
+            <text>抽奖</text>
+        </navigator>
+    </view>
+    <view class="col">
+        <navigator appId="{{more.app_id}}" class="link" hoverClass="none" openType="navigate" path="{{more.path}}{{more.path&&chid?'?chid='+chid:''}}" target="miniProgram">
+            <view class="ico ico-more"></view>
+            <text>更多精彩</text>
+        </navigator>
+    </view>
+</view>

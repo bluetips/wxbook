@@ -1,0 +1,71 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/discover/index",
+    "pages/shelf/index",
+    "pages/store/index",
+    "pages/topic/index",
+    "pages/search/index",
+    "pages/login/index",
+    "pages/intro/index",
+    "pages/catalog/index",
+    "pages/read/index",
+    "pages/offline/index",
+    "pages/my/index",
+    "pages/recharge/index",
+    "pages/rewards/index",
+    "pages/consume/index",
+    "pages/readlogs/index",
+    "pages/coupons/index",
+    "pages/ranks/index",
+    "pages/lottery/index",
+    "pages/receive/index",
+    "pages/contact/index",
+    "pages/mobile/index",
+    "pages/invitees/index",
+    "pages/task/task"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "方糖小说",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#333333",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/shelf/index",
+        "text": "书架",
+        "iconPath": "images/shelf.png",
+        "selectedIconPath": "images/shelf-highlight.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "推荐",
+        "iconPath": "images/recommend.png",
+        "selectedIconPath": "images/recommend-highlight.png"
+      },
+      {
+        "pagePath": "pages/discover/index",
+        "text": "发现",
+        "iconPath": "images/discover.png",
+        "selectedIconPath": "images/discover-highlight.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/me-highlight.png"
+      }
+    ]
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx50214321a2b5a1d4"
+  ],
+  "sitemapLocation": "sitemap.json"
+}

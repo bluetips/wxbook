@@ -1,0 +1,72 @@
+.body .list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    padding: 0 20rpx;
+    flex-wrap: wrap;
+}
+
+.body .list .item {
+    flex-shrink: 0;
+    width: 25%;
+    text-align: center;
+    padding-top: 20rpx;
+}
+
+.body .list .item .gift {
+    margin: 0 auto;
+    width: 140rpx;
+    height: 140rpx;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    border: 1px solid #EEEEEE;
+    border-radius: 10rpx;
+}
+
+.body .list .item .name {
+    font-size: 32rpx;
+    color: #333333;
+    line-height: 2;
+    height: 64rpx;
+}
+
+.body .list .item .wealth {
+    font-size: 24rpx;
+    color: #999999;
+}
+
+.body .list .item.active .gift {
+    border: 2px solid #21D3AB;
+}
+
+.body .list .item.active .name {
+    font-weight: bold;
+}
+
+.body .action-group {
+    padding: 50rpx 40rpx 40rpx;
+}
+
+.body .action-group .button {
+    display: block;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    border: 0 none;
+    background: none;
+    font-size: 32rpx;
+    color: #ffffff;
+    background: #21D3AB;
+    border-radius: 40rpx;
+}
+
+.body .action-group .button:after {
+    border: 0 none;
+}
+
+.body .action-group .button.button-close {
+    background: transparent;
+    color: #333333;
+    border: 2rpx solid #999999;
+}

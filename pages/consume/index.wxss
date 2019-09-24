@@ -1,0 +1,40 @@
+.page {
+    background: #ffffff;
+}
+
+.page .content {
+    position: relative;
+}
+
+.page .content .inner {
+    display: none;
+}
+
+.page .content .inner.active {
+    display: block;
+}
+
+.page .content .inner .scroll-view_V .list {
+    padding: 0 30rpx 30rpx;
+}
+
+.page .content .inner .scroll-view_V .list .item {
+    position: relative;
+    padding: 30rpx 0 0;
+}
+
+.page .content .inner .scroll-view_V .list .item.item-width-line {
+    padding: 30rpx 0;
+}
+
+.page .content .inner .scroll-view_V .list .item.item-width-line:not(:last-child):after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    height: 1px;
+    background: #D8D8D8;
+    transform-origin: 0 100%;
+    transform: scaleY(0.5);
+}

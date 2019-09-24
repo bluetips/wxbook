@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "领书卷",
+    "usingComponents": {
+        "coupon": "/components/coupon/index",
+        "receive": "/components/receive/index"
+    }
+}

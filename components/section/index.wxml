@@ -1,0 +1,9 @@
+<view class="section">
+    <view class="header" wx:if="{{title}}">
+        <view class="title">{{title}}</view>
+        <slot name="more"></slot>
+    </view>
+    <view class="body">
+        <slot name="body"></slot>
+    </view>
+</view>

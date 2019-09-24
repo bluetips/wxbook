@@ -1,0 +1,21 @@
+<view class="page">
+    <view class="content">
+        <form bindsubmit="formSubmit" class="form">
+            <view class="section">
+                <view class="form-control">
+                    <input bindinput="onInput" class="form-input" data-field="phone" name="phone" placeholder="请输入手机号" type="text" value="{{phone}}"></input>
+                </view>
+            </view>
+            <view class="section">
+                <view class="form-control">
+                    <input bindinput="onInput" class="form-input" data-field="sms" name="sms" placeholder="请输入短信码" type="text" value="{{sms}}"></input>
+                </view>
+                <view class="countdown" wx:if="{{second!==0}}">{{second}}秒</view>
+                <button bindtap="handleCode" class="button-code" hoverClass="none" wx:else>获取验证码</button>
+            </view>
+            <view class="action">
+                <button class="button-primary" formType="submit" hoverClass="none">绑定</button>
+            </view>
+        </form>
+    </view>
+</view>

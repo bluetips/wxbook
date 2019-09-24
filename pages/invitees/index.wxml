@@ -1,0 +1,19 @@
+<view class="page page-invitees">
+    <scroll-view scrollY bindscrolltolower="fetch" class="box" wx:if="{{invitees.length}}">
+        <view class="invitee-list">
+            <view class="item" wx:for="{{invitees}}" wx:key="{{ item.id }}">
+                <image class="avatar" src="https:{{item.headimgurl}}"></image>
+                <view class="content">
+                    <view class="nickname flex__item">
+                        <text>{{item.nickname}}</text>
+                    </view>
+                    <view class="join-at">{{item.join_at}}</view>
+                </view>
+            </view>
+        </view>
+        <loadmore wx:if="{{fetching}}"></loadmore>
+    </scroll-view>
+    <nothing wx:if="{{finish&&invitees.length===0}}">
+        <view class="empty">空空如也</view>
+    </nothing>
+</view>

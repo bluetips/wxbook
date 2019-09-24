@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "thumb": "/components/thumb/index"
+    }
+}

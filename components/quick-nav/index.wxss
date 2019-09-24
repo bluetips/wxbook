@@ -1,0 +1,49 @@
+.nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    background: #ffffff;
+}
+
+.nav .col {
+    -webkit-box-flex: 1;
+    flex: 1;
+}
+
+.nav .col .link {
+    padding: 40rpx 20rpx 30rpx;
+    font-size: 28rpx;
+    color: #333333;
+    text-align: center;
+}
+
+.nav .col .link:first-child {
+    padding-left: 30rpx;
+}
+
+.nav .col .link:last-child {
+    padding-right: 30rpx;
+}
+
+.nav .col .link .ico {
+    width: 80rpx;
+    height: 80rpx;
+    background-size: cover;
+    margin: 0 auto 10rpx;
+}
+
+.nav .col .link .ico.ico-ranking {
+    background-image: url("https://mcdn.pinchuzu.cn/novel-cloud/ranking.png");
+}
+
+.nav .col .link .ico.ico-classify {
+    background-image: url("https://mcdn.pinchuzu.cn/novel-cloud/classify.png");
+}
+
+.nav .col .link .ico.ico-lottery {
+    background-image: url("https://mcdn.pinchuzu.cn/novel-cloud/lottery.png");
+}
+
+.nav .col .link .ico.ico-more {
+    background-image: url("https://mcdn.pinchuzu.cn/novel-cloud/more.png");
+}

@@ -1,0 +1,24 @@
+<view class="page">
+    <view class="content">
+        <scroll-view scrollY class="scroll-view_V" wx:if="{{ready}}">
+            <view class="user">
+                <view class="user-info">
+                    <view class="avatar" style="background-image:url('{{profile.headimgurl}}')"></view>
+                    <view class="nickname">{{profile.nickname}}<text class="iconfont icon-vip" wx:if="{{profile.is_vip>0}}"></text>
+                    </view>
+                </view>
+                <view class="welth">书币余额：{{profile.welth}}</view>
+            </view>
+            <view class="products">
+                <view bindtap="recharge" class="product" data-id="{{item.id}}" wx:for="{{products}}" wx:key="index">
+                    <view class="price">
+                        <text>{{item.price/100}}</text>
+                        <text class="unit">元</text>
+                    </view>
+                    <view class="desc">{{item.welth}}</view>
+                </view>
+            </view>
+            <view class="introduce">注意: 1元 = 100书币, 书币属于虚拟商品, 一经购买不可退换</view>
+        </scroll-view>
+    </view>
+</view>

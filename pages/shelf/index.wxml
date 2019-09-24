@@ -1,0 +1,28 @@
+<view class="page">
+    <view class="container">
+        <topbar action="{{list.length?action:''}}" bind:cancel="onCancel" bind:edit="onEdit" title="我的书架"></topbar>
+        <view class="content">
+            <block wx:if="{{ready}}">
+                <scroll-view scrollY class="scroll-view_V" wx:if="{{list.length}}">
+                    <view class="list">
+                        <view class="item" wx:for="{{list}}" wx:key="index">
+                            <shelf-novel-item bind:chapter="navigateToChapter" bind:intro="navigateToIntro" bind:select="handleSelect" checked="{{foo.hasChecked(item.novel_id,ids)}}" novel="{{item}}" status="{{action==='cancel'?'isEditing':'normal'}}"></shelf-novel-item>
+                        </view>
+                    </view>
+                </scroll-view>
+                <nothing wx:else>
+                    <view class="empty">暂无最近阅读</view>
+                    <navigator class="button-primary" hoverClass="none" openType="switchTab" url="/pages/discover/index">去发现好书</navigator>
+                </nothing>
+            </block>
+            <no-network bind:refresh="onShow" wx:if="{{offline}}"></no-network>
+        </view>
+    </view>
+    <view class="actionbar {{list.length&&action==='cancel'?'visible':''}}">
+        <view bindtap="onSelectAll" class="selectAll {{foo.hasAllChecked(list,ids)?'active':''}}">
+            <image class="radio uncheck" src="/images/circle.png"></image>
+            <image class="radio check" src="/images/check.png"></image>全选</view>
+        <view bindtap="onDelete" class="delete">删除({{ids.length}})</view>
+    </view>
+</view>
+<wxs module="foo" src="tools.wxs" />

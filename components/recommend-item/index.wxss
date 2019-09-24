@@ -1,0 +1,125 @@
+.card {
+    background: #ffffff;
+    border-radius: 20rpx;
+    box-shadow: 0 0 30rpx 0 rgba(0,0,0,0.05);
+    padding: 40rpx;
+}
+
+.card .novel {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    padding-bottom: 40rpx;
+}
+
+.card .novel:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    height: 1px;
+    background: #D8D8D8;
+    transform-origin: 0 100%;
+    transform: scaleY(0.5);
+}
+
+.card .novel .media {
+    width: 150rpx;
+    flex-shrink: 0;
+}
+
+.card .novel .media~.content {
+    margin-left: 30rpx;
+}
+
+.card .novel .content {
+    -webkit-box-flex: 1;
+    flex: 1;
+    color: #666666;
+    font-size: 28rpx;
+    line-height: 1.8;
+}
+
+.card .novel .content .title {
+    font-size: 36rpx;
+    color: #333333;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.card .novel .content .extra .status {
+    margin-right: 30rpx;
+}
+
+.card .novel .content .extra .score {
+    color: #ff8c00;
+}
+
+.card .summary {
+    line-height: 40rpx;
+    font-size: 28rpx;
+    color: #999999;
+    margin: 30rpx 0 0;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card .tags {
+    margin-bottom: 30rpx;
+}
+
+.card .action-group {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.card .action-group .action {
+    -webkit-box-flex: 1;
+    flex: 1;
+}
+
+.card .action-group .action .button-shelf {
+    display: block;
+    height: 75rpx;
+    line-height: 75rpx;
+    text-align: center;
+    border: 0 none;
+    background: none;
+    font-size: 28rpx;
+    color: #666666;
+    padding: 0 30rpx 0 0;
+}
+
+.card .action-group .action .button-shelf:after {
+    border: 0 none;
+}
+
+.card .action-group .action .button-read {
+    display: block;
+    height: 75rpx;
+    line-height: 75rpx;
+    text-align: center;
+    border: 0 none;
+    background: none;
+    font-size: 32rpx;
+    color: #ffffff;
+    background: #21D3AB;
+    border-radius: 37.5rpx;
+}
+
+.card .action-group .action .button-read:after {
+    border: 0 none;
+}
+
+.card .action-group .action+.action {
+    -webkit-box-flex: 1;
+    flex: 1;
+    margin-left: 30rpx;
+}

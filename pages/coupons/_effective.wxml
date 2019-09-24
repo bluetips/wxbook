@@ -1,0 +1,13 @@
+<scroll-view scrollY bindscrolltolower="fetch" class="scroll-view_V" wx:if="{{effective.list.length}}">
+    <view class="list">
+        <view class="item" wx:for="{{effective.list}}" wx:key="index">
+            <coupon coupon="{{item}}" name="effective"></coupon>
+        </view>
+    </view>
+    <view class="finish" wx:if="{{effective.finish}}">
+        <baseline mode="special" text="已全部加载"></baseline>
+    </view>
+</scroll-view>
+<nothing wx:if="{{effective.finish&&effective.list.length===0}}">
+    <view class="empty">空空如也</view>
+</nothing>

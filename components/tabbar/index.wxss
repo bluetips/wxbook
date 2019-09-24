@@ -1,0 +1,58 @@
+.tabbar {
+    position: relative;
+    height: 82rpx;
+    line-height: 82rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    background: #fff;
+}
+
+.tabbar:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    height: 1px;
+    background: #D8D8D8;
+    transform-origin: 0 100%;
+    transform: scaleY(0.5);
+}
+
+.tabbar:before {
+    position: absolute;
+    left: 25%;
+    bottom: 0;
+    transform: translateX(-50%);
+    content: '';
+    width: 60rpx;
+    height: 10rpx;
+    border-radius: 5rpx;
+    background-color: #21D3AB;
+    transition: all 0.3s ease-in-out;
+}
+
+.tabbar.tabbar-0:before {
+    left: 25%;
+}
+
+.tabbar.tabbar-1:before {
+    left: 75%;
+}
+
+.tabbar .tab {
+    position: relative;
+    -webkit-box-flex: 1;
+    flex: 1;
+    text-align: center;
+    font-size: 32rpx;
+    color: #999999;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.tabbar .tab.active {
+    font-weight: bold;
+    color: #333333;
+}

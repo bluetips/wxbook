@@ -1,0 +1,5 @@
+<view class="baseline {{mode}}">
+    <view class="baseline-inner">
+        <view class="text">{{text}}</view>
+    </view>
+</view>

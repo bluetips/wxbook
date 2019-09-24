@@ -1,0 +1,47 @@
+.offline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #F3F8FF;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.offline .box {
+    width: 324rpx;
+    height: 350rpx;
+}
+
+.offline .message {
+    font-size: 28rpx;
+    color: #999999;
+}
+
+.offline .button-refresh {
+    display: block;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    border: 0 none;
+    background: none;
+    font-size: 32rpx;
+    color: #ffffff;
+    background: #21D3AB;
+    border-radius: 40rpx;
+    width: 400rpx;
+    margin-top: 100rpx;
+}
+
+.offline .button-refresh:after {
+    border: 0 none;
+}

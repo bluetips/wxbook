@@ -1,0 +1,75 @@
+<view class="page">
+    <view class="content" wx:if="{{ready}}">
+        <scroll-view scrollY class="scroll-view_V">
+            <view class="user">
+                <view class="avatar" style="background-image: url('{{profile.headimgurl}}')" wx:if="{{profile.headimgurl}}"></view>
+                <view class="avatar" wx:else>
+                    <open-data type="userAvatarUrl"></open-data>
+                </view>
+                <view class="nickname">{{profile.nickname}}<text class="iconfont icon-vip" wx:if="{{profile.is_vip===1}}"></text>
+                </view>
+                <view class="id">ID：{{profile.id}}</view>
+                <view bindtap="checkin" class="checkin {{hasCheckin?'hasCheckin':''}}">
+                    <image class="gift" src="/images/gift.png"></image>{{hasCheckin?'已':''}}签到</view>
+            </view>
+            <view class="list-group">
+                <view class="list-item" wx:if="{{profile.is_vip===1}}">
+                    <view class="ico ico-vip"></view>
+                    <view class="title">我的会员</view>
+                    <view class="after">{{profile.vip_expiry_time}}到期</view>
+                </view>
+                <view class="list-item list-item-link" hoverClass="none">
+                    <view class="ico ico-recharge"></view>
+                    <view class="title">书币余额</view>
+                    <view class="after">{{profile.welth}}书币</view>
+                </view>
+                <navigator class="list-item list-item-link" hoverClass="none" url="/pages/coupons/index">
+                    <view class="ico ico-voucher"></view>
+                    <view class="title">我的书券</view>
+                    <view class="after" wx:if="{{coupons}}">{{coupons}}书券</view>
+                    <view class="iconfont icon-tuceng"></view>
+                </navigator>
+                <navigator class="list-item list-item-link" hoverClass="none" url="/pages/task/task" wx:if="{{isiOS}}">
+                    <view class="ico ico-mission"></view>
+                    <view class="title">任务中心</view>
+                    <view class="iconfont icon-tuceng"></view>
+                </navigator>
+                <navigator class="list-item list-item-link" hoverClass="none" url="/pages/mobile/index" wx:if="{{profile.phone}}">
+                    <view class="ico ico-telephone"></view>
+                    <view class="title">手机绑定</view>
+                    <view class="after">{{profile.phone}}</view>
+                    <view class="iconfont icon-tuceng"></view>
+                </navigator>
+                <button bindgetphonenumber="bindPhoneNumber" class="list-item list-item-link" hoverClass="none" openType="getPhoneNumber" wx:else>
+                    <view class="ico ico-telephone"></view>
+                    <view class="title">手机绑定</view>
+                    <view class="after">请绑定手机</view>
+                    <view class="iconfont icon-tuceng"></view>
+                </button>
+                <view hidden="{{isiOS}}">
+                    <navigator class="list-item list-item-link" hoverClass="none" url="/pages/consume/index">
+                        <view class="ico ico-expense"></view>
+                        <view class="title">消费记录</view>
+                        <view class="iconfont icon-tuceng"></view>
+                    </navigator>
+                </view>
+                <navigator hov class="list-item list-item-link" erClass="none" url="/pages/readlogs/index">
+                    <view class="ico ico-readlog"></view>
+                    <view class="title">阅读记录</view>
+                    <view class="iconfont icon-tuceng"></view>
+                </navigator>
+                <navigator hov class="list-item list-item-link" erClass="none" url="/pages/invitees/index">
+                    <view class="ico ico-invitees"></view>
+                    <view class="title">邀请记录</view>
+                    <view class="iconfont icon-tuceng"></view>
+                </navigator>
+                <navigator class="list-item list-item-link" hoverClass="none" url="/pages/contact/index">
+                    <view class="ico ico-contact"></view>
+                    <view class="title">联系我们</view>
+                    <view class="iconfont icon-tuceng"></view>
+                </navigator>
+            </view>
+        </scroll-view>
+        <modal-checkin bind:close="closeModal" checkin="{{checkin}}"></modal-checkin>
+    </view>
+</view>

@@ -1,0 +1,40 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.2);
+    z-index: 99;
+    display: none;
+}
+
+.modal.show {
+    display: block;
+}
+
+.dialog {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    transition: all .1s linear;
+    z-index: 100;
+}
+
+.dialog.show {
+    transform: translateY(0);
+}
+
+.dialog .header {
+    padding: 30rpx 0 20rpx;
+}
+
+.dialog .header .title {
+    font-size: 36rpx;
+    color: #333333;
+    text-align: center;
+    font-weight: 500;
+}

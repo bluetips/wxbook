@@ -1,0 +1,20 @@
+<view class="page">
+    <view class="content">
+        <block wx:if="{{ready}}">
+            <scroll-view scrollY bindscrolltolower="fetch" class="scroll-view_V" wx:if="{{list.length}}">
+                <view class="list">
+                    <view class="item" wx:for="{{list}}" wx:key="id">
+                        <readlog-novel-card novel="{{item}}"></readlog-novel-card>
+                    </view>
+                </view>
+                <view class="finish" wx:if="{{finish}}">
+                    <baseline text="已全部加载"></baseline>
+                </view>
+            </scroll-view>
+            <nothing wx:else>
+                <view class="empty">空空如也</view>
+                <navigator class="button-primary" hoverClass="none" openType="switchTab" url="/pages/discover/index">去发现好书</navigator>
+            </nothing>
+        </block>
+    </view>
+</view>

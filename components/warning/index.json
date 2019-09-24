@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "baseline": "/components/baseline/index"
+    }
+}

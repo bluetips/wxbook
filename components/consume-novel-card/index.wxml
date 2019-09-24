@@ -1,0 +1,24 @@
+<navigator class="novel" hoverClass="none" openType="navigate" url="/pages/read/index?id={{novel.article_id}}">
+    <view class="media">
+        <thumb src="{{novel.novel_avatar}}"></thumb>
+    </view>
+    <view class="content">
+        <view class="title">{{novel.novel_title}}</view>
+        <view class="chapter">{{novel.article_title}}</view>
+        <view class="time">{{novel.created_at}}</view>
+    </view>
+    <view class="after">
+        <block wx:if="{{novel.paid_welth_used>0&&novel.welth_coupon_used===0}}">
+            <view class="wealth">{{novel.paid_welth_used}}</view>
+            <view class="unit">书币</view>
+        </block>
+        <block wx:if="{{novel.welth_coupon_used>0&&novel.paid_welth_used===0}}">
+            <view class="wealth">{{novel.welth_coupon_used}}</view>
+            <view class="unit">书券</view>
+        </block>
+        <block wx:if="{{novel.paid_welth_used>0&&novel.welth_coupon_used>0}}">
+            <view class="wealth">{{novel.paid_welth_used+novel.welth_coupon_used}}</view>
+            <view class="unit">{{novel.paid_welth_used}}书币 + {{novel.welth_coupon_used}}书券</view>
+        </block>
+    </view>
+</navigator>

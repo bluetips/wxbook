@@ -1,0 +1,16 @@
+.tags {
+    line-height: 1;
+}
+
+.tags .tag {
+    display: inline-block;
+    height: 40rpx;
+    line-height: 40rpx;
+    font-size: 24rpx;
+    color: #8A8A8F;
+    border-radius: 20rpx;
+    background: #EFEFF4;
+    padding: 0 18rpx;
+    margin-top: 20rpx;
+    margin-right: 20rpx;
+}

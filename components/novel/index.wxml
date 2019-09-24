@@ -1,0 +1,6 @@
+<navigator class="novel" hoverClass="none" openType="navigate" url="/pages/intro/index?id={{novel.id}}">
+    <view class="media">
+        <thumb src="{{novel.avatar}}"></thumb>
+    </view>
+    <view class="title">{{novel.title}}</view>
+</navigator>

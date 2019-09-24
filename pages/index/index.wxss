@@ -1,0 +1,132 @@
+.page {
+    background: linear-gradient(to bottom,#FAFCFF 0%,#F2F8FF 100%);
+}
+
+.page .content .inner .scroll-view_V {
+    display: none;
+}
+
+.page .content .inner .scroll-view_V.active {
+    display: block;
+}
+
+.page .content .inner .scroll-view_V .list {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.page .content .inner .scroll-view_V .list .item {
+    padding: 40rpx 40rpx 0;
+}
+
+.page .content .inner .scroll-view_V .list .item:last-child {
+    padding-bottom: 45rpx;
+}
+
+.page .guide {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 30rpx;
+    z-index: 2;
+}
+
+.page .guide .item {
+    padding: 16rpx 106rpx;
+}
+
+.page .guide .item .image {
+    margin-top: 20rpx;
+}
+
+.page .guide .item:first-child .image {
+    vertical-align: -18rpx;
+    margin-left: 30rpx;
+    margin-top: 0;
+}
+
+.page .guide .button-know {
+    position: relative;
+    height: 80rpx;
+    line-height: 80rpx;
+    background: transparent;
+    border-radius: 40rpx;
+    color: #FFFFFF;
+    width: 270rpx;
+    font-size: 30rpx;
+    z-index: 3;
+    border: 1px solid #FFFFFF;
+    margin-top: 30rpx;
+}
+
+.page .guide .button-know:after {
+    border-color: #FFFFFF;
+}
+
+.page .modal-invite {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+}
+
+.page .modal-invite .redpacket {
+    width: 692rpx;
+    height: 580rpx;
+}
+
+.page .modal-invite .dialog {
+    background: #FFFFFF;
+    border-radius: 10rpx;
+    width: 480rpx;
+    padding: 50rpx;
+    margin-bottom: 50rpx;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 36rpx;
+    line-height: 1.5;
+}
+
+.page .modal-invite .dialog .avatar {
+    width: 210rpx;
+    margin: 30rpx auto 0;
+}
+
+.page .modal-invite .btn-close {
+    width: 88rpx;
+    height: 88rpx;
+    border-radius: 44rpx;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    line-height: 68rpx;
+    padding: 10rpx;
+}
+
+.page .modal-invite .btn-close .icon-close {
+    color: #333333;
+    font-size: 40rpx;
+}

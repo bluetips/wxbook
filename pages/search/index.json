@@ -1,0 +1,10 @@
+{
+    "navigationBarTitleText": "搜索",
+    "usingComponents": {
+        "searchbar": "/components/searchbar/index",
+        "popular-search": "/components/popular-search/index",
+        "novel-card": "/components/novel-card/index",
+        "baseline": "/components/baseline/index",
+        "nothing": "/components/nothing/index"
+    }
+}

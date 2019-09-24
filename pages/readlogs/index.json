@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "阅读记录",
+    "usingComponents": {
+        "baseline": "/components/baseline/index",
+        "nothing": "/components/nothing/index",
+        "readlog-novel-card": "/components/readlog-novel-card/index"
+    }
+}

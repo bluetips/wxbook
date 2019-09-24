@@ -1,0 +1,4 @@
+<view class="empty">
+    <image class="box" src="/images/empty.png"></image>
+    <slot></slot>
+</view>

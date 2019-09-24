@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "目录",
+    "usingComponents": {
+        "nothing": "/components/nothing/index"
+    }
+}

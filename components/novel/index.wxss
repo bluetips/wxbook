@@ -1,0 +1,10 @@
+.novel .media {
+    width: 100%;
+}
+
+.novel .title {
+    font-size: 28rpx;
+    color: #666666;
+    list-style: 1.5;
+    margin-top: 20rpx;
+}

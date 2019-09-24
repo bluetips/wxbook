@@ -1,0 +1,60 @@
+<view class="page">
+    <view class="tabbar">
+        <tabbar bind:switch="switchGender" idx="{{gender==='male'?0:1}}" tabs="{{tabs}}"></tabbar>
+    </view>
+    <view class="content">
+        <scroll-view scrollY bindscroll="scroll" bindscrolltolower="fetch" class="scroll-view_V">
+            <view class="placeholder" style="display: {{fixed?'block':'none'}};height: {{height[gender]}}px"></view>
+            <view class="filter-groups {{fixed?'fixed':''}}" style="{{style}}">
+                <view bindtap="expand" class="group" wx:if="{{collapse}}">
+                    <view class="item active" wx:if="{{filter.category===''&&filter.status===''&&filter.length_type===''}}">全部</view>
+                    <block wx:else>
+                        <view class="item active" wx:if="{{filter.category}}">{{filter.category}}</view>
+                        <view class="item active" wx:if="{{filter.length_type}}">{{filter.length_type==='1'?'长篇':'短篇'}}</view>
+                        <view class="item active" wx:if="{{filter.status}}">{{foo.getStatus(filter.status)}}</view>
+                    </block>
+                    <view class="arrow">
+                        <view class="iconfont icon-arrow"></view>
+                    </view>
+                </view>
+                <block wx:else>
+                    <view class="group">
+                        <view bindtap="reload" class="item {{filter.category==''?'active':''}}" data-category="">全部</view>
+                        <view bindtap="reload" class="item {{filter.category===item.name?'active':''}}" data-category="{{item.name}}" wx:for="{{categories[gender]}}" wx:key="index">{{item.name}}</view>
+                    </view>
+                    <view class="group">
+                        <view bindtap="reload" class="item {{filter.length_type===''?'active':''}}" data-length_type="">全部</view>
+                        <view bindtap="reload" class="item {{filter.length_type==='1'?'active':''}}" data-length_type="1">长篇</view>
+                        <view bindtap="reload" class="item {{filter.length_type==='2'?'active':''}}" data-length_type="2">短篇</view>
+                    </view>
+                    <view class="group">
+                        <view bindtap="reload" class="item {{filter.status==''?'active':''}}" data-status="">全部</view>
+                        <view bindtap="reload" class="item {{filter.status=='ongoing'?'active':''}}" data-status="ongoing">连载中</view>
+                        <view bindtap="reload" class="item {{filter.status=='completed'?'active':''}}" data-status="completed">已完结</view>
+                        <view bindtap="reload" class="item {{filter.status=='free'?'active':''}}" data-status="free">免费</view>
+                    </view>
+                </block>
+            </view>
+            <block wx:if="{{ready}}">
+                <block wx:if="{{total}}">
+                    <view class="list">
+                        <block wx:for="{{list}}" wx:for-item="novels" wx:key="index">
+                            <view class="item" wx:for="{{novels}}" wx:key="id">
+                                <novel-card free="{{filter.status==='free'}}" novel="{{item}}"></novel-card>
+                            </view>
+                        </block>
+                    </view>
+                    <view class="finish" wx:if="{{finish}}">
+                        <baseline text="已全部加载"></baseline>
+                    </view>
+                </block>
+                <view style="width: 100%; height: 441rpx;position: relative;margin-top: 100rpx;" wx:else>
+                    <nothing>
+                        <view class="empty">空空如也</view>
+                    </nothing>
+                </view>
+            </block>
+        </scroll-view>
+    </view>
+</view>
+<wxs module="foo" src="../../utils/tools.wxs" />

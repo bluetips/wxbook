@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "正文",
+    "usingComponents": {
+        "actionbar": "/components/actionbar/index",
+        "charge-tip": "/components/charge-tip/index",
+        "modal-guide": "/components/modal/modal-guide/index"
+    }
+}

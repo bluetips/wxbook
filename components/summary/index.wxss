@@ -1,0 +1,9 @@
+.summary {
+    font-size: 28rpx;
+    color: #8A8A8F;
+    line-height: 45rpx;
+}
+
+.summary .link {
+    color: #21D3AB;
+}

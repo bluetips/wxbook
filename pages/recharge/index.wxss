@@ -1,0 +1,93 @@
+.page .content .user {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 25rpx 40rpx;
+    background-color: #fff;
+}
+
+.page .content .user .user-info {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.page .content .user .user-info .avatar {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page .content .user .user-info .nickname {
+    padding-left: 24rpx;
+    font-size: 32rpx;
+    font-weight: bold;
+}
+
+.page .content .user .user-info .nickname .icon-vip {
+    font-weight: normal;
+    color: #C8B194;
+    margin-left: 20rpx;
+}
+
+.page .content .user .welth {
+    font-size: 28rpx;
+    color: #999999;
+}
+
+.page .content .products {
+    padding: 40rpx 20rpx;
+}
+
+.page .content .products:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.page .content .products .product {
+    float: left;
+    padding: 0 20rpx;
+    margin-bottom: 40rpx;
+    width: 50%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.page .content .products .product .price {
+    padding: 40rpx 0;
+    border-radius: 20rpx 20rpx 0 0;
+    font-size: 70rpx;
+    line-height: 70rpx;
+    font-weight: bold;
+    background-color: #fff;
+}
+
+.page .content .products .product .price .unit {
+    padding-left: 8rpx;
+    font-size: 28rpx;
+    line-height: 28rpx;
+    font-weight: normal;
+}
+
+.page .content .products .product .desc {
+    padding: 15rpx;
+    font-size: 28rpx;
+    border-radius: 0 0 20rpx 20rpx;
+    color: #fff;
+    background-color: #21D3AB;
+}
+
+.page .content .introduce {
+    padding: 40rpx;
+    font-size: 24rpx;
+    color: #999999;
+}

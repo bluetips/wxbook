@@ -1,0 +1,9 @@
+<view class="coupon coupon-{{name}}">
+    <block wx:if="{{!empty}}">
+        <view class="amount">
+            <text class="num">{{coupon.usable_amount}}</text>书券</view>
+        <view class="detail" hidden="{{hide}}">总共{{coupon.amount}}书券(已使用{{coupon.consumed_amount}}书券)</view>
+        <view class="time">有效期至{{coupon.iso_expired_at}}</view>
+    </block>
+    <view class="empty" wx:else>{{empty==1?'今日领取次数已用完':'该红包已被领光'}}</view>
+</view>

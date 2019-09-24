@@ -1,0 +1,2 @@
+<view class="summary">{{text}} {{length>limit&&!expand?'...':''}}<text bindtap="_handleSummary" class="link" wx:if="{{length>limit}}">{{expand?'收起':'更多'}}</text>
+</view>

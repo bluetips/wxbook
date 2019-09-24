@@ -1,0 +1,23 @@
+<view class="page">
+    <view class="content" wx:if="{{ready}}">
+        <scroll-view scrollY bindscrolltolower="fetch" class="scroll-view_V" wx:if="{{list.length}}">
+            <view class="list">
+                <view class="item" wx:for="{{list}}" wx:key="id">
+                    <view class="avatar" style="background-image:url('{{item.headimgurl}}')"></view>
+                    <view class="info">
+                        <view class="nickname">{{item.nickname}}</view>
+                        <view class="date">{{item.created_at}}</view>
+                    </view>
+                    <view class="gift" style="background-image:url('{{item.gift_img_url}}')"></view>
+                    <view class="num">x {{item.gift_amount}}</view>
+                </view>
+                <view class="finish" wx:if="{{finish}}">
+                    <baseline text="已全部加载"></baseline>
+                </view>
+            </view>
+        </scroll-view>
+        <nothing wx:else>
+            <view class="empty">空空如也</view>
+        </nothing>
+    </view>
+</view>

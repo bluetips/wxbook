@@ -1,0 +1,13 @@
+<view class="page">
+    <view class="tabbar">
+        <tabbar bind:switch="switchTab" idx="{{tab==='effective'?0:1}}" tabs="{{tabs}}"></tabbar>
+    </view>
+    <view class="content">
+        <view class="inner {{tab==='effective'?'active':''}}">
+            <include src="./_effective.wxml"></include>
+        </view>
+        <view class="inner {{tab==='expire'?'active':''}}">
+            <include src="./_expire.wxml"></include>
+        </view>
+    </view>
+</view>

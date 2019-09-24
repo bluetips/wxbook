@@ -1,0 +1,16 @@
+<navigator class="novel" hoverClass="none" openType="navigate" url="/pages/intro/index?id={{novel.id}}">
+    <view class="media">
+        <thumb src="{{novel.avatar}}"></thumb>
+    </view>
+    <view class="content">
+        <view class="title-number">
+            <view class="title">{{novel.title}}</view>
+            <text class="{{index<4?'highlight':''}}">{{index}}</text>
+        </view>
+        <view class="summary">{{novel.summary}}</view>
+        <view class="author-score">
+            <text class="author">主角: {{novel.roles}}</text>
+            <text class="score">{{novel.score}}分</text>
+        </view>
+    </view>
+</navigator>

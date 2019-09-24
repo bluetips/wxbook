@@ -1,0 +1,18 @@
+.section {
+    background: #ffffff;
+}
+
+.section .header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 30rpx;
+}
+
+.section .header .title {
+    font-weight: bold;
+    font-size: 36rpx;
+    color: #333333;
+}

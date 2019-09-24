@@ -1,0 +1,15 @@
+<view class="order">
+    <view class="content">
+        <view class="title">
+            <text wx:if="{{order.product_type==='welth'}}">{{order.welth+order.reward_welth}}书币</text>
+            <text wx:if="{{order.product_type==='vip'}}">年费VIP会员</text>
+        </view>
+        <view class="time">{{order.paid_at}}</view>
+    </view>
+    <view class="after">
+        <view class="price">¥ {{order.price}}</view>
+        <view class="status paid" wx:if="{{order.status==='1'}}">充值成功</view>
+        <view class="status refunded" wx:if="{{order.status==='4'}}">退款成功</view>
+        <view class="status refunding" wx:if="{{order.status==='5'}}">退款中</view>
+    </view>
+</view>

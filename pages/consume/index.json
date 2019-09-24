@@ -1,0 +1,10 @@
+{
+    "navigationBarTitleText": "消费记录",
+    "usingComponents": {
+        "tabbar": "/components/tabbar/index",
+        "baseline": "/components/baseline/index",
+        "nothing": "/components/nothing/index",
+        "consume-novel-card": "/components/consume-novel-card/index",
+        "order-item": "/components/order-item/index"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "我的",
+    "usingComponents": {
+        "modal-checkin": "/components/modal/modal-checkin/index"
+    }
+}

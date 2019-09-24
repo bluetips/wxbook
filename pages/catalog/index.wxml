@@ -1,0 +1,24 @@
+<view class="page">
+    <view class="navigation" wx:if="{{sum>limit}}">
+        <scroll-view scrollX class="scroll-view_H">
+            <view class="list">
+                <view bindtap="change" class="item {{currentIndex===index?'active':''}}" data-index="{{index}}" wx:for="{{range}}" wx:key="index">{{item}}</view>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="content" wx:if="{{sum}}">
+        <scroll-view scrollY class="scroll-view_V {{currentIndex===index?'active':''}}" wx:for="{{range}}" wx:key="index">
+            <view class="list-group">
+                <navigator class="list-item" hoverClass="none" openType="navigate" url="/pages/read/index?id={{item.id}}" wx:for="{{list[index]}}" wx:key="id">
+                    <view class="title">{{item.title}}</view>
+                    <view class="after" wx:if="{{item.welth>0&&is_time_limited_free!=='free'}}">
+                        <view class="iconfont icon-diamonds"></view>
+                    </view>
+                </navigator>
+            </view>
+        </scroll-view>
+    </view>
+    <nothing wx:else>
+        <view class="empty">空空如也</view>
+    </nothing>
+</view>

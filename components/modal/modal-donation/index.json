@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "donation": "/components/modal/donation/index"
+    }
+}

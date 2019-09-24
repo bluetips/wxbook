@@ -1,0 +1,132 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.2);
+    z-index: 99;
+}
+
+.dialog {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    color: #FFFFFF;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    z-index: 100;
+    font-weight: normal;
+    font-size: 36rpx;
+}
+
+.dialog .inner {
+    position: relative;
+}
+
+.dialog .hd {
+    position: relative;
+    width: 480rpx;
+    height: 80rpx;
+    background: linear-gradient(to bottom,#45EBD5 0%,#21D3AB 100%);
+    border-top-right-radius: 20rpx;
+    border-top-left-radius: 20rpx;
+}
+
+.dialog .hd .hook {
+    position: absolute;
+    top: -17rpx;
+    left: 135rpx;
+    width: 30rpx;
+}
+
+.dialog .hd .hook+.hook {
+    left: auto;
+    right: 135rpx;
+}
+
+.dialog .hd .hook:before,.dialog .hd .hook:after {
+    position: absolute;
+    content: '';
+}
+
+.dialog .hd .hook:before {
+    top: 38rpx;
+    width: 30rpx;
+    height: 30rpx;
+    border-radius: 15rpx;
+    background: #12B18D;
+}
+
+.dialog .hd .hook:after {
+    left: 7rpx;
+    width: 16rpx;
+    height: 60rpx;
+    border-radius: 8rpx;
+    background: #666666;
+}
+
+.dialog .bd {
+    width: 480rpx;
+    background: #FFFFFF;
+    border-bottom-right-radius: 20rpx;
+    border-bottom-left-radius: 20rpx;
+    text-align: center;
+    padding: 20rpx 20rpx 40rpx;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+.dialog .bd .gift {
+    display: block;
+    margin: 0 auto;
+    width: 214rpx;
+    height: 183rpx;
+}
+
+.dialog .bd .message {
+    color: #21D3AB;
+    font-size: 42rpx;
+}
+
+.dialog .bd .content {
+    font-size: 36rpx;
+    color: #333333;
+}
+
+.dialog .bd .content .wealth {
+    color: #21D3AB;
+    margin: 0 10rpx;
+}
+
+.dialog .bd .button-close {
+    display: block;
+    height: 70rpx;
+    line-height: 70rpx;
+    text-align: center;
+    border: 0 none;
+    background: none;
+    font-size: 32rpx;
+    color: #ffffff;
+    background: #21D3AB;
+    border-radius: 35rpx;
+    width: 360rpx;
+    font-size: 36rpx;
+    background: -webkit-linear-gradient(315deg,#45EBD5 0%,#21D3AB 100%);
+    background: linear-gradient(135deg,#45EBD5 0%,#21D3AB 100%);
+    margin-top: 30rpx;
+}
+
+.dialog .bd .button-close:after {
+    border: 0 none;
+}

@@ -1,0 +1,15 @@
+<view hidden="{{!checkin}}">
+    <view class="modal"></view>
+    <view class="dialog">
+        <view class="hd">
+            <view class="hook"></view>
+            <view class="hook"></view>
+        </view>
+        <view class="bd">
+            <image class="gift" src="/images/gift-box.png"></image>
+            <view class="message">{{checkin.message}}</view>
+            <view class="content" wx:if="{{checkin.reward>0}}">签到奖励<text class="wealth">{{checkin.reward}}</text>书币</view>
+            <button bindtap="close" class="button-close">我知道了</button>
+        </view>
+    </view>
+</view>

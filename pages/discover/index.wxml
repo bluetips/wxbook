@@ -1,0 +1,21 @@
+<view class="page">
+    <searchbar page="discover"></searchbar>
+    <view class="tabbar">
+        <tabbar bind:switch="switchTab" idx="{{gender==='male'?0:1}}" tabs="{{tabs}}"></tabbar>
+    </view>
+    <view class="content">
+        <block wx:if="{{ready}}">
+            <view class="inner {{gender==='female'?'active':''}}">
+                <include src="./_female.wxml"></include>
+            </view>
+            <view class="inner {{gender==='male'?'active':''}}">
+                <include src="./_male.wxml"></include>
+            </view>
+        </block>
+        <no-network bind:refresh="onShow" wx:if="{{offline}}"></no-network>
+        <modal-newcomer bind:task="finishTask" task="{{task}}"></modal-newcomer>
+    </view>
+    <button class="button-fixed-share animated tada" openType="share">
+        <image class="share" src="/images/share.png"></image>
+    </button>
+</view>

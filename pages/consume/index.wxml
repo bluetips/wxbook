@@ -1,0 +1,13 @@
+<view class="page">
+    <view class="tabbar">
+        <tabbar bind:switch="switchTab" idx="{{tab==='consume'?0:1}}" tabs="{{tabs}}"></tabbar>
+    </view>
+    <view class="content">
+        <view class="inner {{tab==='consume'?'active':''}}">
+            <include src="./_consume.wxml"></include>
+        </view>
+        <view class="inner {{tab==='orders'?'active':''}}">
+            <include src="./_orders.wxml"></include>
+        </view>
+    </view>
+</view>

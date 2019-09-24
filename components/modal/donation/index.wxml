@@ -1,0 +1,16 @@
+<view class="body">
+    <view class="list">
+        <view catchtap="_select" class="item {{activeId===item.id?'active':''}}" data-id="{{item.id}}" data-wealth="{{item.wealth}}" wx:for="{{gifts}}" wx:key="id">
+            <view class="gift" style="background-image:url('{{item.img_url}}')"></view>
+            <view class="name">{{item.title}}</view>
+            <view class="wealth">{{item.wealth}}书币</view>
+        </view>
+    </view>
+    <view class="action-group">
+        <block wx:if="{{activeId}}">
+            <button catchtap="donate" class="button button-donate" wx:if="{{activeWealth<=balance}}">确认打赏</button>
+            <button bindtap="_recharge" class="button button-charge" wx:else>余额不足，前往充值</button>
+        </block>
+        <button catchtap="closeModal" class="button button-close" wx:else>关闭</button>
+    </view>
+</view>

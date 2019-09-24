@@ -1,0 +1,73 @@
+.page .form {
+    display: block;
+    padding: 0 60rpx;
+}
+
+.page .form .section {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    background: #ffffff;
+    border-radius: 9rpx;
+    margin-top: 30rpx;
+    -webkit-box-align: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.page .form .section .form-control {
+    position: relative;
+    -webkit-box-flex: 1;
+    flex: 1;
+    padding: 30rpx 30rpx;
+}
+
+.page .form .section .form-control .form-input {
+    font-size: 34rpx;
+    height: 42rpx;
+}
+
+.page .form .section .form-control:after {
+    content: ' ';
+    position: absolute;
+    right: -1px;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    border-left: 1px solid #D8D8D8;
+    transform-origin: 0 100%;
+    transform: scaleX(0.5);
+}
+
+.page .form .section .button-code {
+    color: #21D3AB;
+    background: transparent;
+    font-size: 34rpx;
+    height: 108rpx;
+    line-height: 108rpx;
+    width: 220rpx;
+    border-radius: 0;
+}
+
+.page .form .section .button-code:after {
+    border: 0 none;
+}
+
+.page .form .section .countdown {
+    color: #999999;
+    height: 108rpx;
+    line-height: 108rpx;
+    width: 220rpx;
+    text-align: center;
+    font-size: 34rpx;
+}
+
+.page .form .action {
+    margin-top: 30rpx;
+}
+
+.page .form .action .button-primary {
+    background: #21D3AB;
+    color: #ffffff;
+    font-size: 36rpx;
+}

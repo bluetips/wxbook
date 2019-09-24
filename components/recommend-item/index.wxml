@@ -1,0 +1,29 @@
+<view class="card">
+    <view class="novel">
+        <view bindtap="goToIntro" class="media">
+            <thumb src="{{novel.avatar}}"></thumb>
+        </view>
+        <view class="content">
+            <view class="title">{{novel.title}}</view>
+            <view class="roles">{{novel.roles}}</view>
+            <view class="extra">评分：<text class="score">{{novel.score}}</text>
+            </view>
+            <view class="extra">状态：<block wx:if="{{novel.status==='completed'}}">
+                    <text class="status completed">已完结</text>总共{{novel.article_count}}章</block>
+                <block wx:if="{{novel.status==='ongoing'}}">
+                    <text class="status ongoing">连载中</text>更新至{{novel.article_count}}章</block>
+            </view>
+        </view>
+    </view>
+    <view class="summary">{{novel.summary}}</view>
+    <view class="tags">
+        <tags tags="{{novel.tags}}"></tags>
+    </view>
+    <view class="action-group">
+        <view class="action">
+            <form bindsubmit="read" reportSubmit="true">
+                <button class="button-read" formType="submit">{{novel.is_time_limited_free?'免费阅读':'立即阅读'}}</button>
+            </form>
+        </view>
+    </view>
+</view>

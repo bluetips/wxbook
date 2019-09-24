@@ -1,0 +1,69 @@
+<view class="bar {{mode}}">
+    <view class="top">
+        <block wx:if="{{!fontSetting}}">
+            <view class="action">
+                <form bindsubmit="prev" reportSubmit="true">
+                    <button class="button-plain {{prev===0?'button-disable':''}}" disabled="{{prev===0}}" formType="submit" type="default">上一章</button>
+                </form>
+            </view>
+            <view class="title">{{title}}</view>
+            <view class="action">
+                <form bindsubmit="next" reportSubmit="true">
+                    <button class="button-plain {{next===0?'button-disable':''}}" disabled="{{next===0}}" formType="submit" type="default">下一章</button>
+                </form>
+            </view>
+        </block>
+        <block wx:else>
+            <view class="label">字号</view>
+            <view class="setting">
+                <button bindtap="shrinkSize" class="button-plain {{size<17?'button-disable':''}}" disabled="{{size<17}}">
+                    <view class="iconfont icon-sub"></view>
+                </button>
+                <view class="size">{{size}}</view>
+                <button bindtap="enlargeSize" class="button-plain {{size>31?'button-disable':''}}" disabled="{{size>31}}">
+                    <view class="iconfont icon-add"></view>
+                </button>
+            </view>
+        </block>
+    </view>
+    <view class="action-group">
+        <view class="action">
+            <button bindtap="showCatalog" class="button-plain" type="default">
+                <view class="inner">
+                    <view class="iconfont icon-list"></view>
+                    <text>目录</text>
+                </view>
+            </button>
+        </view>
+        <view class="action">
+            <button bindtap="_goToIntro" class="button-plain" type="default">
+                <view class="inner">
+                    <view class="iconfont icon-intro"></view>
+                    <text>简介</text>
+                </view>
+            </button>
+        </view>
+        <view class="action">
+            <button bindtap="changeMode" class="button-plain" type="default">
+                <view class="inner">
+                    <block wx:if="{{mode==='day'}}">
+                        <view class="iconfont icon-night"></view>
+                        <text>夜间</text>
+                    </block>
+                    <block wx:else>
+                        <view class="iconfont icon-day"></view>
+                        <text>白天</text>
+                    </block>
+                </view>
+            </button>
+        </view>
+        <view class="action">
+            <button bindtap="_showFontSize" class="button-plain {{fontSetting?'active':''}}" type="default">
+                <view class="inner">
+                    <view class="iconfont icon-size"></view>
+                    <text>字号</text>
+                </view>
+            </button>
+        </view>
+    </view>
+</view>

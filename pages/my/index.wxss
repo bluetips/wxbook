@@ -1,0 +1,129 @@
+.page {
+    background: #ffffff;
+}
+
+.page .user {
+    position: relative;
+    padding: 60rpx 20rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    background: #ffffff;
+}
+
+.page .user .avatar {
+    position: relative;
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 100rpx;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+.page .user .avatar:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 1px solid #D8D8D8;
+    box-sizing: border-box;
+}
+
+.page .user .nickname {
+    font-size: 32rpx;
+    color: #333333;
+    font-weight: bold;
+    margin: 20rpx 0 10rpx;
+}
+
+.page .user .nickname .icon-vip {
+    font-weight: normal;
+    color: #C8B194;
+    margin-left: 20rpx;
+}
+
+.page .user .id {
+    font-size: 24rpx;
+    color: #666666;
+}
+
+.page .user .checkin {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 196rpx;
+    width: 150rpx;
+    background: linear-gradient(135deg,#45EBD5 0%,#21D3AB 100%);
+    color: #FFFFFF;
+    font-size: 30rpx;
+    border-top-left-radius: 30rpx;
+    border-bottom-left-radius: 30rpx;
+    padding: 4px 10rpx 6rpx 30rpx;
+    height: 50rpx;
+}
+
+.page .user .checkin .gift {
+    display: block;
+    width: 44rpx;
+    height: 40rpx;
+    margin-right: 12rpx;
+}
+
+.page .list-group .list-item:after {
+    display: none;
+}
+
+.page .list-group .ico.ico-vip {
+    background-image: url("https://mcdn.pinchuzu.cn/novel-cloud/vip.png");
+}
+
+.page .list-group .ico.ico-voucher {
+    background-image: url("https://mcdn.pinchuzu.cn/novel-cloud/voucher.png");
+}
+
+.page .list-group .ico.ico-recharge {
+    background-image: url("https://mcdn.pinchuzu.cn/novel-cloud/recharge.png");
+}
+
+.page .list-group .ico.ico-expense {
+    background-image: url("https://mcdn.pinchuzu.cn/novel-cloud/expense.png");
+}
+
+.page .list-group .ico.ico-readlog {
+    background-image: url("https://mcdn.pinchuzu.cn/novel-cloud/readlog.png");
+}
+
+.page .list-group .ico.ico-contact {
+    background-image: url("https://mcdn.pinchuzu.cn/novel-cloud/contact.png");
+}
+
+.page .list-group .ico.ico-unlocking {
+    background-image: url("https://mcdn.pinchuzu.cn/novel-cloud/unlocking.png");
+}
+
+.page .list-group .ico.ico-telephone {
+    background-image: url("https://mcdn.pinchuzu.cn/novel-cloud/telephone.png");
+}
+
+.page .list-group .ico.ico-invitees {
+    background-image: url("https://mcdn.pinchuzu.cn/novel-cloud/invitees.png");
+}
+
+.page .list-group .ico.ico-mission {
+    background-image: url("https://mcdn.pinchuzu.cn/novel-cloud/mission.png");
+}

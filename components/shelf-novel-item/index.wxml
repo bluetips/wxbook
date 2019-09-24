@@ -1,0 +1,9 @@
+<view bindtap="select" class="novel {{status}} {{checked?'active':''}}">
+    <view class="media">
+        <thumb src="{{novel.avatar}}"></thumb>
+        <image class="radio radio-check" src="/images/check.png"></image>
+        <image class="radio radio-uncheck" src="/images/uncheck.png"></image>
+    </view>
+    <view class="title">{{novel.title}}</view>
+    <view class="percent">读至 第{{novel.last_read_idx}}章</view>
+</view>

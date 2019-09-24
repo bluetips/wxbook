@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "分类",
+    "usingComponents": {
+        "tabbar": "/components/tabbar/index",
+        "novel-card": "/components/novel-card/index",
+        "baseline": "/components/baseline/index",
+        "nothing": "/components/nothing/index"
+    }
+}

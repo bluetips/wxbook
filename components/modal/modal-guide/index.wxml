@@ -1,0 +1,7 @@
+<view hidden="{{!is_new_member}}">
+    <view class="modal"></view>
+    <view class="dialog">
+        <text>点击文章区域可以呼出快捷菜单哦～</text>
+        <button bindtap="_close" class="button-close">知道了</button>
+    </view>
+</view>

@@ -1,0 +1,13 @@
+<view hidden="{{!(task.length>0&&task[0].status===2)}}">
+    <view class="modal"></view>
+    <view class="dialog">
+        <view class="inner">
+            <image class="newcomer" src="/images/newcomer.png"></image>
+            <view class="content">
+                <view class="title">{{task[0].name}}</view>
+                <view class="description">{{task[0].welth_coupon}}书券</view>
+                <button bindtap="finishTask" class="button-get">立即领取</button>
+            </view>
+        </view>
+    </view>
+</view>

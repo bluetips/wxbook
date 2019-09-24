@@ -1,0 +1,31 @@
+<view class="page" wx:if="{{ready}}">
+    <view class="mod">
+        <view class="subhead">
+            <view class="title">可用书券<text class="primary">{{stats.usable_total||0}}</text>
+            </view>
+        </view>
+        <view class="bd">每日用户可以通过做任务赚书券，每次只需<text class="primary">10来秒</text>就能轻松收入<text class="primary">{{config.reward_amount}}书券</text>。</view>
+        <view class="bd">书券具体明细，请前往<navigator class="link" hoverClass="none" url="/pages/coupons/index">我的书券</navigator>。</view>
+    </view>
+    <view class="mod">
+        <subhead title="今日"></subhead>
+        <view class="timeline">
+            <view class="item" wx:for="{{config.daily_limit}}" wx:key="*this">
+                <block wx:if="{{index<times}}">
+                    <image class="icon" src="/images/arrive.png"></image>
+                    <view class="content">已获取<text class="primary">{{config.reward_amount}}</text>书券</view>
+                </block>
+                <block wx:else>
+                    <image class="icon" src="/images/play.png"></image>
+                    <view class="content">
+                        <text class="primary">{{config.reward_amount}}</text>书券</view>
+                    <button bindtap="handleRewardVideo" class="button-primary" hoverClass="none">看视频,赚书券</button>
+                </block>
+            </view>
+        </view>
+    </view>
+    <view class="explain">
+        <view class="li">1. 1书券=1书币</view>
+        <view class="li">2. 书券仅能用于解锁小说付费章节</view>
+    </view>
+</view>

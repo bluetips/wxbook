@@ -1,0 +1,5 @@
+<view class="offline">
+    <image class="box" src="/images/offline.png"></image>
+    <view class="message">Ooops 网络出错了～</view>
+    <button bindtap="onReresh" class="button-refresh">刷新</button>
+</view>

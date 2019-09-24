@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "我的书券",
+    "usingComponents": {
+        "tabbar": "/components/tabbar/index",
+        "baseline": "/components/baseline/index",
+        "nothing": "/components/nothing/index",
+        "coupon": "/components/coupon/index"
+    }
+}

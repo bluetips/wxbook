@@ -1,0 +1,12 @@
+{
+    "navigationBarTitleText": "书籍详情",
+    "usingComponents": {
+        "thumb": "/components/thumb/index",
+        "section": "/components/section/index",
+        "summary": "/components/summary/index",
+        "novel": "/components/novel/index",
+        "tags": "/components/tags/index",
+        "modal-donation": "/components/modal/modal-donation/index",
+        "modal-lottery": "/components/modal/modal-lottery/index"
+    }
+}

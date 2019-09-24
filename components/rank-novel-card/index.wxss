@@ -1,0 +1,77 @@
+.novel {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: stretch;
+    justify-content: stretch;
+}
+
+.novel .media {
+    width: 120rpx;
+    margin-right: 30rpx;
+    flex-shrink: 0;
+}
+
+.novel .content {
+    -webkit-box-flex: 1;
+    flex: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.novel .content .title-number {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    font-size: 32rpx;
+    font-weight: bold;
+}
+
+.novel .content .title-number .title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 20rpx;
+}
+
+.novel .content .title-number .highlight {
+    color: #F86000;
+}
+
+.novel .content .summary {
+    font-size: 28rpx;
+    color: #8A8A8F;
+    line-height: 40rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.novel .content .author-score {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: end;
+    align-items: flex-end;
+    font-size: 24rpx;
+    color: #8A8A8F;
+}

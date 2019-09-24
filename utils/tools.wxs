@@ -1,0 +1,16 @@
+var tools = ({
+    getStatus: (function(status) {
+        var str = '';
+        if (status === 'ongoing') {
+            str = '连载中'
+        } else if (status === 'completed') {
+            str = '已完结'
+        } else if (status === 'free') {
+            str = '限时免费'
+        };
+        return (str)
+    }),
+});
+module.exports = ({
+    getStatus: tools.getStatus,
+});

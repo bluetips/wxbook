@@ -1,0 +1,3 @@
+<view class="tabbar tabbar-{{idx}}">
+    <view bindtap="onSwitch" class="tab {{index===idx?'active':''}}" data-label="{{item.label}}" wx:for="{{tabs}}" wx:key="index">{{item.name}}</view>
+</view>

@@ -1,0 +1,65 @@
+.novel {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+.novel .media {
+    width: 120rpx;
+    flex-shrink: 0;
+}
+
+.novel .content {
+    position: relative;
+    -webkit-box-flex: 1;
+    flex: 1;
+    margin: 0 30rpx;
+    height: 160rpx;
+    overflow: hidden;
+}
+
+.novel .content .title {
+    font-size: 32rpx;
+    color: #333333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.novel .content .chapter {
+    font-size: 28rpx;
+    color: #999999;
+    margin-top: 20rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.novel .content .time {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 24rpx;
+    color: #999999;
+}
+
+.novel .after {
+    width: 200rpx;
+    flex-shrink: 0;
+    text-align: right;
+}
+
+.novel .after .wealth {
+    font-size: 40rpx;
+    color: #999999;
+}
+
+.novel .after .unit {
+    font-size: 24rpx;
+    color: #999999;
+}

@@ -1,0 +1,15 @@
+<block wx:if="{{orders.ready}}">
+    <scroll-view scrollY bindscrolltolower="fetch" class="scroll-view_V" wx:if="{{orders.list.length}}">
+        <view class="list">
+            <view class="item item-width-line" wx:for="{{orders.list}}" wx:key="index">
+                <order-item order="{{item}}"></order-item>
+            </view>
+        </view>
+        <view class="finish" wx:if="{{orders.finish}}">
+            <baseline text="已全部加载"></baseline>
+        </view>
+    </scroll-view>
+    <nothing wx:else>
+        <view class="empty">空空如也</view>
+    </nothing>
+</block>

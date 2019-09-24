@@ -1,0 +1,100 @@
+<view class="page">
+    <block wx:if="{{ready}}">
+        <view class="content">
+            <scroll-view scrollY class="inner">
+                <view class="novel">
+                    <view class="intro">
+                        <view class="title">{{novel.title}}</view>
+                        <view class="roles">主角：{{novel.roles}}</view>
+                        <view class="roles">评分：<text class="score">{{novel.score}}</text>
+                        </view>
+                        <view class="extra">
+                            <view class="info">{{foo.getStatus(novel.status)}}</view>
+                            <view class="info">{{novel.words}}</view>
+                        </view>
+                        <view class="tags" wx:if="{{novel.tags.length}}">
+                            <tags tags="{{novel.tags}}"></tags>
+                        </view>
+                    </view>
+                    <view class="media">
+                        <thumb bindtap="preview" src="{{novel.avatar}}"></thumb>
+                    </view>
+                </view>
+                <view class="operator">
+                    <view class="action" wx:if="{{!isiOS}}">
+                        <view bindtap="donate" class="button-plain button-donate">
+                            <view class="iconfont icon-package"></view>
+                            <text class="text">打赏</text>
+                        </view>
+                    </view>
+                    <view class="action">
+                        <button class="button-plain button-share" openType="share">
+                            <view class="iconfont icon-export"></view>
+                            <text class="text">分享</text>
+                        </button>
+                    </view>
+                </view>
+                <view class="whitespace"></view>
+                <view class="summary">
+                    <summary content="{{novel.summary}}"></summary>
+                </view>
+                <view class="catalog">
+                    <view class="list-group">
+                        <navigator class="list-item list-item-link" hoverClass="none" url="/pages/catalog/index?id={{novel.id}}&total={{novel.article_count}}&status={{novel.is_time_limited_free?'free':'pay'}}">
+                            <view class="title bold">目录</view>
+                            <view class="after">
+                                <block wx:if="{{latest}}">最新更新：{{latest.title}}</block>
+                                <block wx:else>共{{novel.article_count}}章</block>
+                            </view>
+                            <view class="iconfont icon-tuceng"></view>
+                        </navigator>
+                    </view>
+                </view>
+                <view class="whitespace"></view>
+                <ad unitId="adunit-010a82387f7d784b"></ad>
+                <view class="rewards">
+                    <view class="list-group">
+                        <navigator class="list-item list-item-link" hoverClass="none" url="/pages/rewards/index?id={{novel.id}}">
+                            <view class="title bold">打赏列表</view>
+                            <view class="after" wx:if="{{rewards.length}}">
+                                <view class="avatar" style="background-image:url('{{item.headimgurl}}')" wx:for="{{rewards}}" wx:key="id"></view>
+                            </view>
+                            <view class="iconfont icon-tuceng"></view>
+                        </navigator>
+                    </view>
+                </view>
+                <view class="whitespace"></view>
+                <section title="猜你喜欢" wx:if="{{relatedList.length}}">
+                    <view class="related" slot="body">
+                        <view class="list">
+                            <view class="item" wx:for="{{relatedList}}" wx:key="id">
+                                <novel novel="{{item}}"></novel>
+                            </view>
+                        </view>
+                    </view>
+                </section>
+            </scroll-view>
+        </view>
+        <view class="bottom">
+            <view class="whitespace shadow"></view>
+            <view class="action-group">
+                <view class="action">
+                    <form bindsubmit="handleFavorited" reportSubmit="true">
+                        <button class="button-shelf" formType="submit" type="default">
+                            <block wx:if="{{favorited}}">移出书架</block>
+                            <block wx:else>加入书架</block>
+                        </button>
+                    </form>
+                </view>
+                <view class="action">
+                    <form bindsubmit="read" reportSubmit="true">
+                        <button class="button-read" formType="submit" type="default">开始阅读</button>
+                    </form>
+                </view>
+            </view>
+        </view>
+        <modal-donation balance="{{balance}}" bind:close="closeModal" bind:donate="handleDonate" gifts="{{gifts}}" visible="{{isVisible}}"></modal-donation>
+    </block>
+    <modal-lottery bind:close="closeLotteryModal" visible="{{isLotteryVisible}}"></modal-lottery>
+</view>
+<wxs module="foo" src="../../utils/tools.wxs" />

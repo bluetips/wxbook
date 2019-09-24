@@ -1,0 +1,11 @@
+.page .content {
+    position: relative;
+}
+
+.page .content .inner {
+    display: none;
+}
+
+.page .content .inner.active {
+    display: block;
+}

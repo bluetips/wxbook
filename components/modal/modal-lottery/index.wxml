@@ -1,0 +1,11 @@
+<view class="modal {{visible?'show':''}}"></view>
+<view class="dialog {{visible?'show':''}}">
+    <icon bindtap="close" class="close" color="white" size="30" type="clear"></icon>
+    <image class="light" src="/images/lottery/light.png"></image>
+    <image class="pop" src="/images/lottery/lottery-pop.png"></image>
+    <view class="content">
+        <view class="text">恭喜您！</view>
+        <view class="text">您获得一次抽奖机会。</view>
+        <navigator class="button-primary" hoverClass="none" url="/pages/lottery/index">立即抽奖</navigator>
+    </view>
+</view>

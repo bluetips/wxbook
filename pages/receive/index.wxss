@@ -1,0 +1,65 @@
+.page .content .tips {
+    text-align: center;
+    font-size: 32rpx;
+    font-weight: bold;
+}
+
+.page .content .tips.tips-top {
+    padding-top: 50rpx;
+}
+
+.page .content .button-box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.page .content .button-primary {
+    display: block;
+    height: 75rpx;
+    line-height: 75rpx;
+    text-align: center;
+    border: 0 none;
+    background: none;
+    font-size: 32rpx;
+    color: #ffffff;
+    background: #21D3AB;
+    border-radius: 37.5rpx;
+    margin: 60rpx auto;
+    width: 630rpx;
+}
+
+.page .content .button-primary:after {
+    border: 0 none;
+}
+
+.page .content .button-primary:after {
+    border: 0 none;
+}
+
+.page .content .button-primary.button-back {
+    width: 300rpx;
+    background-color: transparent;
+    color: #666666;
+    border: 1rpx solid #999999;
+    box-sizing: border-box;
+}
+
+.page .content .button-primary.button-coupon {
+    width: 300rpx;
+}
+
+.page .content .rule {
+    width: 100%;
+    margin-top: 60rpx;
+    padding: 40rpx;
+    box-sizing: border-box;
+    font-size: 28rpx;
+    line-height: 50rpx;
+    color: #999999;
+}

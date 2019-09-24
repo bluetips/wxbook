@@ -1,0 +1,24 @@
+.page {
+    background: #ffffff;
+}
+
+.page .content .scroll-view_V {
+    position: relative;
+}
+
+.page .content .scroll-view_V:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    height: 1px;
+    background: #D8D8D8;
+    transform-origin: 0 100%;
+    transform: scaleY(0.5);
+    top: 0;
+}
+
+.page .content .scroll-view_V .list .item {
+    padding: 30rpx 40rpx 0;
+}

@@ -1,0 +1,5 @@
+<section title="热门搜索" wx:if="{{words.length}}">
+    <view class="list" slot="body">
+        <navigator class="item" hoverClass="none" url="/pages/intro/index?id={{item.novel_id}}" wx:for="{{words}}" wx:key="id">{{item.text}}</navigator>
+    </view>
+</section>

@@ -1,0 +1,14 @@
+<navigator class="novel" hoverClass="none" openType="navigate" url="/pages/read/index?id={{novel.article_id}}">
+    <view class="media">
+        <thumb src="{{novel.avatar}}"></thumb>
+    </view>
+    <view class="content">
+        <view class="title">{{novel.title}}</view>
+        <view class="chapter">{{novel.article_title}}</view>
+        <view class="time">{{novel.read_at}}</view>
+    </view>
+    <view class="after">
+        <view class="percent">{{novel.percent}}</view>
+        <view class="unit">阅读进度</view>
+    </view>
+</navigator>

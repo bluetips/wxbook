@@ -1,0 +1,13 @@
+.empty {
+    position: absolute;
+    top: 50%;
+    left: 60rpx;
+    right: 60rpx;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.empty .box {
+    width: 376rpx;
+    height: 441rpx;
+}

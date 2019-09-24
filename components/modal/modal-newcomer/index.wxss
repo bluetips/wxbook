@@ -1,0 +1,72 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.2);
+    z-index: 99;
+}
+
+.dialog {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    color: #FFFFFF;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    z-index: 100;
+    font-weight: normal;
+    font-size: 36rpx;
+}
+
+.dialog .inner {
+    position: relative;
+}
+
+.dialog .inner .newcomer {
+    width: 650rpx;
+    height: 580rpx;
+}
+
+.dialog .inner .content {
+    position: absolute;
+    top: 60rpx;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #FF7700;
+    line-height: 1.5;
+}
+
+.dialog .inner .title {
+    font-size: 60rpx;
+}
+
+.dialog .inner .description {
+    font-size: 80rpx;
+    font-weight: bold;
+}
+
+.dialog .inner .button-get {
+    background: transparent;
+    margin-top: 214rpx;
+    font-size: 0;
+    line-height: 0;
+    height: 86rpx;
+    width: 300rpx;
+}
+
+.dialog .inner .button-get:after {
+    border: 0 none;
+}

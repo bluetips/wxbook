@@ -1,0 +1,22 @@
+<view class="user">
+    <view class="button-login" wx:if="{{offline}}">
+        <image class="avatar" src="/images/koala@2x.png"></image>
+        <view>登录</view>
+    </view>
+    <block wx:else>
+        <view class="button-login" wx:if="{{profile}}">
+            <navigator hoverClass="none" url="/pages/my/index">
+                <view class="avatar" style="background-image: url('{{profile.headimgurl}}')" wx:if="{{profile.headimgurl}}"></view>
+                <view class="avatar" wx:else>
+                    <open-data type="userAvatarUrl"></open-data>
+                </view>
+            </navigator>
+        </view>
+        <button bindgetuserinfo="getUserInfo" class="button-login" openType="getUserInfo" wx:else>
+            <view class="avatar" style="background-image:url('https://qcdn.pinchuzu.cn/spa/koala@2x.png')">
+                <image class="avatar" src="/images/koala@2x.png" wx:if="{{offline}}"></image>
+            </view>
+            <view>登录</view>
+        </button>
+    </block>
+</view>

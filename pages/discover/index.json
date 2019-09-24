@@ -1,0 +1,14 @@
+{
+    "navigationBarTitleText": "发现",
+    "usingComponents": {
+        "tabbar": "/components/tabbar/index",
+        "searchbar": "/components/searchbar/index",
+        "carousel": "/components/carousel/index",
+        "quick-nav": "/components/quick-nav/index",
+        "section": "/components/section/index",
+        "novel": "/components/novel/index",
+        "novel-card": "/components/novel-card/index",
+        "no-network": "/components/no-network/index",
+        "modal-newcomer": "/components/modal/modal-newcomer/index"
+    }
+}

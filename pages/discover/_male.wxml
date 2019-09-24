@@ -1,0 +1,71 @@
+<scroll-view scrollY bindscrolltolower="loadmore" class="scroll-view_V">
+    <view class="pane">
+        <carousel novels="{{male.fangtang_carousel}}"></carousel>
+        <quick-nav more="{{moreApp}}"></quick-nav>
+        <view class="whitespace"></view>
+        <section title="热门分类">
+            <navigator class="more" hoverClass="none" slot="more" url="/pages/store/index">
+                <text>更多</text>
+                <view class="iconfont icon-tuceng"></view>
+            </navigator>
+            <view class="popular-sort" slot="body">
+                <view class="cell">
+                    <navigator class="sort" hoverClass="none" url="/pages/topic/index?id=fangtang_dushi">
+                        <image class="thumb" src="https://mcdn.pinchuzu.cn/novel-cloud/dushiyongbing.png"></image>
+                        <text>都市佣兵</text>
+                    </navigator>
+                </view>
+                <view class="cell">
+                    <navigator class="sort" hoverClass="none" url="/pages/topic/index?id=fangtang_xuanyi">
+                        <image class="thumb" src="https://mcdn.pinchuzu.cn/novel-cloud/xuanyilingyi.png"></image>
+                        <text>悬疑灵异</text>
+                    </navigator>
+                </view>
+            </view>
+        </section>
+        <view class="whitespace"></view>
+        <section title="本周主打">
+            <view class="recommend" slot="body">
+                <view class="list">
+                    <view class="item" wx:for="{{male.fangtang_weekly_recommend}}" wx:key="index">
+                        <novel novel="{{item}}"></novel>
+                    </view>
+                </view>
+            </view>
+        </section>
+        <view class="whitespace"></view>
+        <block wx:if="{{male.fangtang_trending_list.length}}">
+            <section title="潜力新作">
+                <view class="trending" slot="body">
+                    <view class="list">
+                        <view class="item" wx:for="{{male.fangtang_trending_list}}" wx:key="index">
+                            <novel-card novel="{{item}}"></novel-card>
+                        </view>
+                    </view>
+                </view>
+            </section>
+            <view class="whitespace"></view>
+        </block>
+        <block wx:if="{{male.fangtang_completed.length}}">
+            <section title="完结推荐">
+                <view class="completed" slot="body">
+                    <view class="list">
+                        <view class="item" wx:for="{{male.fangtang_completed}}" wx:key="index">
+                            <novel novel="{{item}}"></novel>
+                        </view>
+                    </view>
+                </view>
+            </section>
+            <view class="whitespace"></view>
+        </block>
+        <section title="发现好书" wx:if="{{male.fangtang_bestsell.length}}">
+            <view class="bestsell" slot="body">
+                <view class="list">
+                    <view class="item" wx:for="{{male.fangtang_bestsell}}" wx:key="index">
+                        <novel-card novel="{{item}}"></novel-card>
+                    </view>
+                </view>
+            </view>
+        </section>
+    </view>
+</scroll-view>

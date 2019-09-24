@@ -1,0 +1,7 @@
+<view bindtap="closeModal" class="modal {{visible?'show':''}}"></view>
+<view class="dialog {{visible?'show':''}}">
+    <view class="header">
+        <view class="title">打赏作者</view>
+    </view>
+    <donation balance="{{balance}}" bind:close="closeModal" bind:donate="donate" bind:recharge="recharge" gifts="{{gifts}}" wx:if="{{visible}}"></donation>
+</view>

@@ -1,0 +1,14 @@
+var tools = ({
+    hasChecked: (function(id, ids) {
+        return (ids.indexOf(id) > -1)
+    }),
+    hasAllChecked: (function(novels, ids) {
+        return (novels.every((function(it) {
+            return (ids.indexOf(it.novel_id) > -1)
+        })))
+    }),
+});
+module.exports = ({
+    hasChecked: tools.hasChecked,
+    hasAllChecked: tools.hasAllChecked,
+});

@@ -1,0 +1,33 @@
+<view class="page">
+    <view class="content" wx:if="{{ready}}">
+        <scroll-view scrollY class="scroll-view_V">
+            <block wx:if="{{is_find}}">
+                <coupon coupon="{{member[0]}}" hide="true"></coupon>
+                <view class="tips">书券已充值到账户</view>
+                <view class="button-box">
+                    <navigator class="button-primary button-back" hoverClass="none" openType="switchTab" url="/pages/index/index">返回首页</navigator>
+                    <navigator class="button-primary button-coupon" hoverClass="none" openType="navigate" url="/pages/coupons/index">立即查看</navigator>
+                </view>
+            </block>
+            <block wx:else>
+                <coupon empty="{{status===1?1:2}}"></coupon>
+                <navigator class="button-primary" hoverClass="none" openType="switchTab" url="/pages/index/index">返回首页</navigator>
+            </block>
+            <view class="list" wx:if="{{receive_list.length>0}}">
+                <view class="item" wx:for="{{receive_list}}" wx:key="key">
+                    <receive item="{{item}}"></receive>
+                </view>
+            </view>
+            <view class="tips" wx:else>该红包暂无人领取~</view>
+            <view class="rule">
+                <text>1. 充值即有机会获得一个拼手气书券 
+ 2. 每个链接仅限15人领取 
+ 3. 每个链接会按照领取顺序随机发放一个大额书券 
+ 4. 每人每天仅限领取3次 
+ 5. 书券仅限有效期内使用 
+ 6. 其他未尽事宜, 请咨询客服 
+</text>
+            </view>
+        </scroll-view>
+    </view>
+</view>

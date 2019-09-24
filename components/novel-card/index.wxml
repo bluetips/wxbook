@@ -1,0 +1,15 @@
+<navigator class="novel" hoverClass="none" openType="navigate" url="/pages/intro/index?id={{novel.id}}">
+    <view class="media">
+        <thumb src="{{novel.avatar}}"></thumb>
+    </view>
+    <view class="content">
+        <view class="title">
+            <rich-text nodes="{{novel.title}}"></rich-text>
+        </view>
+        <view class="time" wx:if="{{free}}">{{novel.free_time_start}} ~ {{novel.free_time_end}}</view>
+        <view class="summary">{{novel.summary}}</view>
+        <view class="tags" wx:if="{{novel.tags.length}}">
+            <tags tags="{{novel.tags}}"></tags>
+        </view>
+    </view>
+</navigator>

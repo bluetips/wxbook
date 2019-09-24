@@ -1,0 +1,29 @@
+<view class="page">
+    <view class="content">
+        <view class="contact">
+            <view class="headset"></view>
+            <view class="tips">在使用中遇到问题, 请联系我们</view>
+            <view class="cell">
+                <view class="cell-head">
+                    <view class="icon icon-qq"></view>
+                    <text>客服QQ</text>
+                </view>
+                <view bindtap="copyQQ" class="cell-footer" data-qq="3421316612" selectable="true">3421316612</view>
+            </view>
+            <view class="cell">
+                <view class="cell-head">
+                    <view class="icon icon-telephone"></view>
+                    <text>客服电话</text>
+                </view>
+                <view bindtap="makecall" class="cell-footer" data-phone="0591-83308305" selectable="true">0591-83308305</view>
+            </view>
+            <view class="cell">
+                <view class="cell-head">
+                    <view class="icon icon-wechat"></view>
+                    <text>客服会话</text>
+                </view>
+                <button class="cell-footer" hoverClass="none" openType="contact">点击进入</button>
+            </view>
+        </view>
+    </view>
+</view>

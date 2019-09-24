@@ -1,0 +1,10 @@
+{
+    "navigationBarTitleText": "推荐",
+    "usingComponents": {
+        "searchbar": "/components/searchbar/index",
+        "tabbar": "/components/tabbar/index",
+        "recommend-item": "/components/recommend-item/index",
+        "thumb": "/components/thumb/index",
+        "no-network": "/components/no-network/index"
+    }
+}

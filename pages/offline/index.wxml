@@ -1,0 +1,15 @@
+<view class="page">
+    <view class="content" wx:if="{{ready}}">
+        <view class="novel">
+            <view class="media">
+                <thumb src="{{novel.avatar}}"></thumb>
+            </view>
+            <view class="title">{{novel.title}}</view>
+        </view>
+        <view class="message">
+            <view class="sorry">很抱歉，敬请期待</view>
+            <view class="explain">此书按版权商要求，下架重新编辑，后期将会上架，敬请期待！</view>
+            <navigator class="button-index" openType="switchTab" url="/pages/discover/index">去发现好书</navigator>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,13 @@
+<view class="searchbar" wx:if="{{page!=='search'}}">
+    <navigator class="inner" hoverClass="none" url="/pages/search/index">
+        <view class="iconfont icon-search"></view>
+        <view class="input input-placeholder">请输入书名搜索</view>
+    </navigator>
+</view>
+<view class="searchbar" wx:else>
+    <view class="inner">
+        <view class="iconfont icon-search"></view>
+        <input autoFoucs bindblur="onSearch" bindconfirm="onSearch" bindinput="onInput" class="input" placeholder="请输入书名搜索" placeholderClass="input-placeholder" type="text" value="{{query}}"></input>
+        <icon bindtap="onClear" size="18" type="clear" wx:if="{{query.length}}"></icon>
+    </view>
+</view>

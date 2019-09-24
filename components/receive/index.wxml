@@ -1,0 +1,14 @@
+<view class="receive">
+    <view class="user">
+        <view class="avatar" style="background-image: url('{{item.headimgurl}}')"></view>
+        <view>
+            <view class="name">{{item.nickname}}</view>
+            <view class="date">{{item.iso_created_at}}</view>
+        </view>
+    </view>
+    <view class="coupons">
+        <view class="coupon">{{item.amount}}<text class="unit">书券</text>
+        </view>
+        <view class="luck" wx:if="{{item.is_lucky_king!==0}}">最佳</view>
+    </view>
+</view>

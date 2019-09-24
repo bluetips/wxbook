@@ -1,0 +1,12 @@
+<view class="wrapper">
+    <swiper autoplay circular bindchange="bindchange" class="carousel" interval="3000">
+        <swiper-item class="carousel-item" wx:for="{{novels}}" wx:key="index">
+            <navigator class="carousel-item-inner" hoverClass="none" openType="navigate" url="/pages/intro/index?id={{item.id}}">
+                <view class="thumb" style="background-image:url('{{item.banner_url}}')"></view>
+            </navigator>
+        </swiper-item>
+    </swiper>
+    <view class="indicator">
+        <view class="dot {{index===current?'active':''}}" wx:for="{{novels.length}}" wx:key="index"></view>
+    </view>
+</view>

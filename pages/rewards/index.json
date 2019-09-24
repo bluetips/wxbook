@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "打赏列表",
+    "usingComponents": {
+        "baseline": "/components/baseline/index",
+        "nothing": "/components/nothing/index"
+    }
+}

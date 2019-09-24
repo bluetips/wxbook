@@ -1,0 +1,60 @@
+.page .content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+}
+
+.page .content .novel {
+    padding: 30rpx 0;
+    background: #FFFFFF;
+    width: 100%;
+}
+
+.page .content .novel .media {
+    margin: 0 auto;
+    width: 220rpx;
+}
+
+.page .content .novel .title {
+    font-size: 28rpx;
+    margin-top: 30rpx;
+    text-align: center;
+}
+
+.page .content .message {
+    padding: 60rpx 130rpx;
+    text-align: center;
+}
+
+.page .content .message .sorry {
+    font-size: 36rpx;
+    margin-bottom: 20rpx;
+}
+
+.page .content .message .explain {
+    font-size: 28rpx;
+}
+
+.page .content .message .button-index {
+    display: block;
+    height: 75rpx;
+    line-height: 75rpx;
+    text-align: center;
+    border: 0 none;
+    background: none;
+    font-size: 32rpx;
+    color: #ffffff;
+    background: #21D3AB;
+    border-radius: 37.5rpx;
+    width: 260rpx;
+    margin: 30rpx auto 0;
+}
+
+.page .content .message .button-index:after {
+    border: 0 none;
+}

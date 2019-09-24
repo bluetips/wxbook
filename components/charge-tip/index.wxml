@@ -1,0 +1,23 @@
+<view bindtap="handActionBar" class="tip {{mode}}">
+    <block wx:if="{{isiOS}}">
+        <view class="message">温馨提示</view>
+        <view class="disallowed">由于小程序相关规范，iOS功能暂不可用。 <button catchtap="_toTask" class="button-task" hoverClass="none">做任务，赚书券</button>
+        </view>
+    </block>
+    <block wx:else>
+        <baseline mode="{{mode}}" text="{{warning.message}}"></baseline>
+        <block wx:if="{{warning.code===90400}}">
+            <view class="message">解锁本书<text class="price">{{warning.data.price}}</text>书币</view>
+            <view class="action-group">
+                <button catchtap="onWholeBuy" class="button-charge">整本购买</button>
+            </view>
+        </block>
+        <block wx:else>
+            <view class="message" wx:if="{{warning.data.buy_mode===1}}">解锁本书<text class="price">{{warning.data.price}}</text>书币</view>
+            <view class="message" wx:else>解锁本章<text class="price">{{warning.data.price}}</text>书币</view>
+            <view class="action-group">
+                <button catchtap="_recharge" class="button-charge" hoverClass="none">请前往充值，继续阅读</button>
+            </view>
+        </block>
+    </block>
+</view>

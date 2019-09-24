@@ -1,0 +1,14 @@
+.list {
+    padding: 0 40rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list .item {
+    font-size: 32rpx;
+    color: #212832;
+    margin-bottom: 30rpx;
+    margin-right: 70rpx;
+}

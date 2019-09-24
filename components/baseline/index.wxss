@@ -1,0 +1,57 @@
+.baseline {
+    background-color: #ffffff;
+    position: relative;
+    padding: 44rpx 60rpx 0;
+}
+
+.baseline .baseline-inner {
+    width: 100%;
+    margin: 0 auto;
+    line-height: 44rpx;
+    text-align: center;
+    border-top: 1px solid #E5E5E5;
+}
+
+.baseline .baseline-inner .text {
+    display: inline-block;
+    position: relative;
+    top: -24rpx;
+    font-size: 32rpx;
+    background-color: #ffffff;
+    padding: 0 60rpx;
+    color: #999999;
+}
+
+.baseline.day,.baseline.special {
+    background-color: #F3F8FF;
+}
+
+.baseline.day .baseline-inner,.baseline.special .baseline-inner {
+    border-top-color: #333333;
+}
+
+.baseline.day .baseline-inner .text,.baseline.special .baseline-inner .text {
+    background-color: #F3F8FF;
+    color: #333333;
+}
+
+.baseline.special .baseline-inner {
+    border-top-color: #E5E5E5;
+}
+
+.baseline.special .baseline-inner .text {
+    color: #999999;
+}
+
+.baseline.night {
+    background-color: #242528;
+}
+
+.baseline.night .baseline-inner {
+    border-top-color: #FFFFFF;
+}
+
+.baseline.night .baseline-inner .text {
+    background-color: #242528;
+    color: #FFFFFF;
+}

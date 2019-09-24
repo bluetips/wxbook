@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "",
+    "usingComponents": {
+        "shelf-novel-item": "/components/shelf-novel-item/index",
+        "nothing": "/components/nothing/index",
+        "no-network": "/components/no-network/index"
+    }
+}

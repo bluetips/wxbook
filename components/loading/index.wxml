@@ -1,0 +1,4 @@
+<view class="loadmore">
+    <view class="loading"></view>
+    <view class="loadmore__tips">正在努力加载中</view>
+</view>

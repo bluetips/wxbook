@@ -1,0 +1,5 @@
+Component({
+    properties: {
+        novel: Object
+    }
+});
